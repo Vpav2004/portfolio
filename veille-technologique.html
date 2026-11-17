@@ -85,6 +85,28 @@
 .watch .watch-kind-attaque{color:#ffd0d5;border-color:#8b5c6f}
 @media(max-width:580px){.watch-lanes{display:flex;flex-direction:column;gap:5px}.watch-lanes .watch-node{grid-template-columns:34px minmax(0,1fr);grid-template-rows:auto auto;justify-items:start;text-align:left}.watch-lanes .watch-node-icon{grid-row:1/3;align-self:center;width:32px;height:32px}.watch-lanes .watch-node small{grid-column:2}.watch-edge{flex-direction:row;gap:8px;padding:1px}.watch-arrow{display:inline-block;transform:rotate(90deg)}.watch-effect-grid{grid-template-columns:1fr}.watch-effect-grid .watch-node{grid-template-columns:36px minmax(0,1fr);grid-template-rows:auto auto;justify-items:start;text-align:left}.watch-effect-grid .watch-node-icon{grid-row:1/3}.watch-effect-grid .watch-node small{grid-column:2}}
 
+/* Parcours après le vol : composants propres à la veille, sans modifier le thème commun */
+.watch-after-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.watch-after-card{padding:17px;background:var(--watch-deep);border:1px solid var(--watch-line);border-radius:12px}
+.watch-after-card h3{color:#dcecff;margin-bottom:8px}
+.watch-after-card ul{margin:8px 0 0;padding-left:1.2rem;color:var(--muted)}
+.watch-after-card li+li{margin-top:6px}
+.watch-after-number{display:inline-grid;place-items:center;width:29px;height:29px;margin-right:8px;border-radius:9px;background:#21465a;color:var(--watch-aqua);font:700 .88rem var(--mono)}
+.watch-after-flow{display:flex;align-items:stretch;gap:8px;margin:17px 0;flex-wrap:wrap}
+.watch-after-flow .watch-node{flex:1 1 150px}
+.watch-after-flow .watch-edge{flex:0 0 38px}
+.watch-example{margin:14px 0;padding:17px;border:1px solid #3b5578;border-radius:12px;background:#111e2e}
+.watch-example strong{color:#e4efff}
+.watch-example code{color:#a9eadb;font-family:var(--mono);overflow-wrap:anywhere}
+.watch-example .watch-route{display:inline-block;margin:8px 0}
+.watch-compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+.watch-compare th,.watch-compare td{padding:11px;border:1px solid var(--watch-line);text-align:left;vertical-align:top}
+.watch-compare th{background:#192b40;color:#e6f2ff}
+.watch-compare td{color:var(--muted)}
+.watch-callout{padding:14px 17px;margin:16px 0;border-left:3px solid var(--watch-aqua);background:#142536;border-radius:0 10px 10px 0}
+.watch-callout p{margin:0}
+@media(max-width:650px){.watch-after-grid{grid-template-columns:1fr}.watch-after-flow{flex-direction:column}.watch-after-flow .watch-edge{flex-basis:auto}.watch-after-flow .watch-arrow{transform:rotate(90deg)}.watch-compare{font-size:.8rem}.watch-compare th,.watch-compare td{padding:8px}}
+
 </style>
 </head>
 <body>
@@ -124,7 +146,7 @@
     <p class="watch-updated">Dernière mise à jour <time datetime="2026-11-17">17 novembre 2026</time></p>
   </section>
   <nav class="watch-nav" aria-label="Sommaire de la veille">
-    <a href="#presentation">Présentation</a><a href="#fonctionnement">Fonctionnement</a><a href="#detournement">Détournement</a><a href="#chronologie">Chronologie</a><a href="#protections">Protections</a><a href="#methodologie">Méthodologie</a><a href="#bilan">Bilan</a>
+    <a href="#presentation">Présentation</a><a href="#fonctionnement">Fonctionnement</a><a href="#detournement">Détournement</a><a href="#apres-vol">Après le vol</a><a href="#chronologie">Chronologie</a><a href="#protections">Protections</a><a href="#methodologie">Méthodologie</a><a href="#bilan">Bilan</a>
   </nav>
   <section class="watch-section card" aria-labelledby="enjeux-title">
     <h2 id="enjeux-title">Pourquoi ce sujet en SISR&nbsp;?</h2>
@@ -178,6 +200,67 @@
 <div class="watch-effect-wrap"><h3>Conséquences possibles</h3><div class="watch-effect-grid"><div class="watch-node"><span class="watch-node-icon"><svg class="watch-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm7 0v5h5M8 12h8m-8 4h8"/></svg></span><strong>Documents</strong><small>Lire ou copier des fichiers accessibles au compte.</small></div><div class="watch-node"><span class="watch-node-icon"><svg class="watch-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><strong>Applications</strong><small>Effectuer des actions depuis la messagerie ou les outils métiers.</small></div><div class="watch-node"><span class="watch-node-icon"><svg class="watch-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12a8 3 0 0 0 16 0V6M4 12a8 3 0 0 0 16 0"/></svg></span><strong>Données</strong><small>Consulter ou modifier des informations selon les droits du compte.</small></div></div></div>
     <aside class="watch-note"><h3>Pourquoi la MFA ne suffit pas toujours&nbsp;?</h3><p>La MFA protège l’authentification initiale. Une application peut ensuite faire confiance à une session déjà validée sans demander de nouveau facteur. Une MFA résistante à l’hameçonnage protège davantage la connexion initiale. La révocation, les contrôles d’accès et la liaison à l’appareil protègent aussi l’usage de la session.</p></aside>
     <a class="watch-source" href="https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/">Microsoft Security · Campagne et usage de sessions compromises ↗</a>
+  </section>
+  <section class="watch-section card" id="apres-vol" aria-labelledby="apres-vol-title">
+    <h2 id="apres-vol-title">Après le vol : que fait réellement l’attaquant ?</h2>
+    <p>Le vol du cookie n’est que le point de départ. L’objectif est de <strong>faire reconnaître des requêtes comme provenant d’une session déjà authentifiée</strong>, puis d’utiliser les autorisations associées au compte. Voici le parcours logique, illustré sans reproduire de procédure d’attaque.</p>
+    <figure class="watch-visual">
+      <div class="watch-after-flow">
+        <div class="watch-node"><span class="watch-node-icon" aria-hidden="true">1</span><strong>Cookie récupéré</strong><small>Un identifiant de session est exposé</small></div>
+        <div class="watch-edge"><span class="watch-arrow" aria-hidden="true">→</span></div>
+        <div class="watch-node"><span class="watch-node-icon" aria-hidden="true">2</span><strong>Session présentée</strong><small>Une requête revendique cette session</small></div>
+        <div class="watch-edge"><span class="watch-arrow" aria-hidden="true">→</span></div>
+        <div class="watch-node"><span class="watch-node-icon" aria-hidden="true">3</span><strong>Contrôle serveur</strong><small>Validité, expiration, révocation, contexte</small></div>
+        <div class="watch-edge"><span class="watch-arrow" aria-hidden="true">→</span></div>
+        <div class="watch-node watch-risk"><span class="watch-node-icon" aria-hidden="true">4</span><strong>Accès ou refus</strong><small>Selon la politique de sécurité</small></div>
+      </div>
+      <figcaption>Schéma conceptuel : posséder un cookie ne garantit pas l’accès. Le serveur doit encore accepter la session et autoriser l’action demandée.</figcaption>
+    </figure>
+    <div class="watch-after-grid">
+      <article class="watch-after-card"><h3><span class="watch-after-number">1</span>Vérifier si la session est utilisable</h3><p>Le cookie peut être expiré, déjà révoqué ou lié à un contexte particulier. Un attaquant cherche à savoir si l’application le considère encore comme valide. Un cookie de préférence ou de mesure d’audience, lui, ne donne pas automatiquement accès à un compte.</p></article>
+      <article class="watch-after-card"><h3><span class="watch-after-number">2</span>Se faire reconnaître par l’application</h3><p>Dans un système classique, le navigateur transmet le cookie de session lors des requêtes concernées. Le serveur retrouve l’état de session et le compte associé. S’il accepte la session présentée par un tiers, il peut confondre cet accès avec celui de l’utilisateur légitime : c’est le <em>session hijacking</em>.</p></article>
+      <article class="watch-after-card"><h3><span class="watch-after-number">3</span>Utiliser les droits du compte</h3><p>Le tiers peut alors tenter d’accéder aux fonctionnalités déjà autorisées : consulter une boîte mail, lire des documents, utiliser un outil métier ou effectuer des modifications. <strong>Il n’obtient pas automatiquement des droits administrateur</strong> : ses possibilités dépendent des permissions du compte et des vérifications propres à chaque action.</p></article>
+      <article class="watch-after-card"><h3><span class="watch-after-number">4</span>Profiter de la fenêtre d’accès</h3><p>Tant que la session reste acceptée, l’accès peut persister même si le mot de passe n’est pas connu. Certaines applications demandent toutefois une nouvelle authentification pour une action sensible, réévaluent le risque ou invalident la session. La durée et l’impact varient donc selon le service.</p></article>
+    </div>
+    <h3>Pourquoi le serveur peut-il le laisser entrer ?</h3>
+    <div class="watch-example">
+      <p><strong>Exemple fictif, volontairement simplifié</strong> : une application possède une session <code>SESSION-DEMO-42</code> associée au compte « Alice ». Ce texte est un identifiant inventé, inutilisable sur un vrai site.</p>
+      <p class="watch-route">Session reconnue → Compte Alice → Droits d’Alice</p>
+      <p>Si une requête présente cet identifiant et que le serveur l’accepte, il peut retrouver « Alice » dans son registre de sessions. <strong>Il vérifie alors l’existence et la validité de la session, pas nécessairement le mot de passe à chaque requête.</strong> C’est cette confiance dans une session déjà ouverte qui rend le détournement possible.</p>
+    </div>
+    <div class="watch-callout"><p><strong>Attention :</strong> le cookie n’est pas forcément le mot de passe, et ce n’est pas non plus une copie complète du compte. Dans l’exemple d’une session conservée côté serveur, c’est un identifiant opaque qui permet de retrouver une session. D’autres architectures existent, notamment avec des jetons signés.</p></div>
+    <h3>Cas concret : une messagerie professionnelle</h3>
+    <ol class="watch-sequence">
+      <li>Une salariée se connecte à sa messagerie avec son mot de passe et sa MFA.</li>
+      <li>Sa session est ouverte. Un cookie de session est ensuite compromis.</li>
+      <li>Un tiers présente la session à l’application ; celle-ci l’accepte dans cet exemple.</li>
+      <li>Le tiers consulte les messages accessibles au compte, recherche des échanges sensibles ou tente d’envoyer un message en son nom.</li>
+      <li>L’équipe informatique détecte une activité suspecte, invalide les sessions concernées et recherche la cause de la compromission.</li>
+    </ol>
+    <p>Ce scénario illustre une possibilité, pas une conséquence systématique. Certaines plateformes bloquent la réutilisation, exigent une nouvelle preuve d’identité ou limitent les opérations possibles.</p>
+    <h3>Quelles actions sont réellement possibles ?</h3>
+    <div class="watch-protection-grid">
+      <article class="watch-panel"><h3>Lecture de données</h3><p>Messages, pièces jointes et fichiers que le compte a le droit de consulter. Cela peut provoquer une fuite d’informations.</p></article>
+      <article class="watch-panel"><h3>Usurpation dans une application</h3><p>Envoi de messages ou actions métier sous l’identité apparente de la victime, si les permissions et contrôles du service le permettent.</p></article>
+      <article class="watch-panel"><h3>Modification de paramètres</h3><p>Changements autorisés dans le compte ou l’application. Une réauthentification peut empêcher certaines opérations critiques.</p></article>
+      <article class="watch-panel"><h3>Accès à d’autres services ?</h3><p>Pas automatiquement. Un cookie est généralement limité à un domaine et à un service ou contexte de session. Une authentification fédérée peut compliquer l’analyse, mais un cookie unique n’ouvre pas tous les sites.</p></article>
+    </div>
+    <h3>Pourquoi une connexion légitime et une session détournée peuvent-elles se ressembler ?</h3>
+    <table class="watch-compare"><thead><tr><th>Élément observé</th><th>Utilisateur légitime</th><th>Session détournée acceptée</th></tr></thead><tbody>
+      <tr><td>Compte associé</td><td>Compte de l’utilisateur</td><td>Le même compte, vu par l’application</td></tr>
+      <tr><td>Mot de passe à chaque page</td><td>Non, en général</td><td>Non, si la session est acceptée</td></tr>
+      <tr><td>MFA à chaque page</td><td>Non, en général</td><td>Pas nécessairement ; un contrôle supplémentaire peut être demandé</td></tr>
+      <tr><td>Signaux dans les journaux</td><td>Activité habituelle</td><td>Éventuels écarts d’adresse IP, d’appareil, de localisation, d’horaires ou d’actions</td></tr>
+    </tbody></table>
+    <p>Un changement d’adresse IP n’est pas une preuve suffisante : VPN, mobilité et réseaux d’entreprise peuvent produire des variations normales. Les équipes de sécurité doivent corréler plusieurs indices.</p>
+    <h3>Et si la victime change son mot de passe ?</h3>
+    <p><strong>Ce n’est pas toujours suffisant.</strong> Une session existante peut rester valide selon la politique de l’application. Pour contenir l’incident, il faut invalider les sessions concernées côté serveur, vérifier les accès et corriger la cause du vol. La section « Protections » présente ce principe avec une démonstration interactive de révocation.</p>
+    <details class="watch-note"><summary>Trois questions possibles à l’oral</summary>
+      <p><strong>« L’attaquant connaît-il le mot de passe ? »</strong> Non, pas nécessairement : il tente d’utiliser une session déjà authentifiée.</p>
+      <p><strong>« Peut-il accéder à tous les sites de la victime ? »</strong> Non. La portée dépend du cookie, de l’application et des droits de la session.</p>
+      <p><strong>« Pourquoi la MFA n’a-t-elle pas bloqué l’accès ? »</strong> Parce qu’elle peut avoir été validée avant le vol ; des contrôles de session supplémentaires restent nécessaires.</p>
+    </details>
+    <p><a class="watch-source" href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP · Session Management Cheat Sheet ↗</a> · <a class="watch-source" href="https://attack.mitre.org/techniques/T1550/004/">MITRE ATT&amp;CK · Web Session Cookie (T1550.004) ↗</a></p>
   </section>
   <section class="watch-section card" id="chronologie">
     <h2>Chronologie des évolutions</h2>
@@ -244,7 +327,7 @@
   </section>
   <section class="watch-section card" id="bilan">
     <h2>Synthèse et bilan personnel</h2>
-    <p>Les cas de la frise montrent qu’un accès peut être compromis après l’authentification et qu’un correctif ne révoque pas nécessairement une session existante. La protection évolue aussi vers des preuves liées à l’appareil, lorsque les applications et navigateurs les prennent en charge.</p>
+    <p>Le parcours après le vol montre comment une session acceptée peut donner accès aux droits du compte sans nouvelle saisie du mot de passe. Les cas de la frise montrent qu’un accès peut être compromis après l’authentification et qu’un correctif ne révoque pas nécessairement une session existante. La protection évolue aussi vers des preuves liées à l’appareil, lorsque les applications et navigateurs les prennent en charge.</p>
     <p>Pour un administrateur SISR, je retiens trois points à vérifier : la durée de vie d’une session, la procédure pour l’invalider et les signaux disponibles dans les journaux.</p>
     <details class="watch-note"><summary>Retour d’expérience personnel à compléter</summary><p>Ajouter un exemple étudié, une connaissance acquise et une application concrète envisagée dans un contexte professionnel.</p></details>
   </section>
