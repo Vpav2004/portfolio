@@ -3,436 +3,230 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Veille technologique | Portfolio</title>
+  <meta name="theme-color" content="#0a0d13">
+  <meta name="description" content="Portfolio de Veljko Pavlovic, alternant technicien informatique et étudiant en BTS SIO option SISR.">
+  <title>Veille | Veljko Pavlovic</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body data-page="veille">
-  <a class="skip" href="#contenu">Passer au contenu principal</a>
-  <header class="site-header">
-    <a class="brand" href="index.html">Portfolio</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" type="button" hidden>Menu</button>
-    <nav id="navigation" aria-label="Navigation principale">
-      <a href="index.html">Présentation</a>
-      <a href="cv.html">CV</a>
-      <a href="veille-technologique.html" aria-current="page">Veille Technologique</a>
-      <a href="mes-projets.html">Mes Projets</a>
-      <a href="consolehub.html">ConsoleHub</a>
-      <details>
-        <summary>E5</summary>
-        <div class="submenu">
-          <a href="entreprise.html">Présentation de l’entreprise</a>
-          <a href="tableau-des-competences.html">Tableau des compétences</a>
-        </div>
-      </details>
-      <details>
-        <summary>E6</summary>
-        <div class="submenu"><a href="missions.html">Missions</a></div>
-      </details>
-    </nav>
-  </header>
-  <main id="contenu" tabindex="-1">
-    <h1 class="sr-only">Veille technologique</h1>
-    
-    <section class="design-section" style="--section-h:351px;--design-min:1778;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item image layout-layer full-layer" style="--x:-632.5px;--y:0px;--w:1264.8px;--h:351px">
-  <img src="assets/media/illustration-1ca184522.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:180;--x:647.9px;--y:18px;--w:217px;--h:37px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;letter-spacing:-0.16px;text-align:center"><span style="color:rgb(255, 255, 255)"><span style="font-weight:700"><span style="letter-spacing:normal"><span style="background-color:rgb(0, 0, 0)">Veljko PAVLOVIC - BTS SIO</span></span></span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:620;--x:-329.1px;--y:62px;--w:658px;--h:136px" data-motion="fade">
-  <img src="assets/media/illustration-ec652f11c.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:2150;--x:-409.1px;--y:215px;--w:817px;--h:41.6px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:17px;letter-spacing:-0.17px;text-align:center"><span style="color:rgb(229, 112, 0)"><span><span style="font-weight:700"><span style="letter-spacing:normal"><span style="background-color:rgb(10, 10, 10)">Solutions d'entreprise open source sécurisées, flexibles et fiables.</span></span></span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:17px;letter-spacing:-0.17px;text-align:center"><span style="color:rgb(229, 112, 0)"><span><span style="font-weight:700"><span style="letter-spacing:normal"><span style="background-color:rgb(10, 10, 10)">Pour les environnements informatiques professionnels les plus exigeants et les budgets les plus serrés.</span></span></span></span></span></p></div>
-</div>
+<body>
+  <a class="skip-link" href="#contenu">Passer au contenu principal</a>
+  
+  <div class="frame" id="portfolio">
+    <header class="top">
+      <a class="brand" href="index.html"><span class="monogram" aria-hidden="true">VP</span><span>Portfolio<span class="brand-divider"> / </span><strong>Veljko Pavlovic</strong></span></a>
+      <nav aria-label="Navigation principale"><a href="index.html">Présentation</a><a href="cv.html">CV</a><a href="veille-technologique.html" aria-current="page">Veille technologique</a><a href="mes-projets.html">Mes projets</a><a href="consolehub.html">ConsoleHub</a><details class="nav-group">
+          <summary aria-controls="menu-e5">E5<span aria-hidden="true">⌄</span></summary>
+          <div class="nav-panel" id="menu-e5">
+            <div class="nav-panel-content"><a href="entreprise.html">Présentation de l’entreprise</a><a href="tableau-des-competences.html">Tableau des compétences</a></div>
+          </div>
+        </details><details class="nav-group">
+          <summary aria-controls="menu-e6">E6<span aria-hidden="true">⌄</span></summary>
+          <div class="nav-panel" id="menu-e6">
+            <div class="nav-panel-content"><a href="missions.html">Missions</a></div>
+          </div>
+        </details></nav>
+    </header>
+    <div class="layout">
+      <aside class="profile" aria-label="Profil de Veljko Pavlovic">
+      <div class="profile-main">
+        <div class="portrait"><img src="assets/media/illustration-1d16527b7.avif" alt="Veljko Pavlovic" decoding="async" fetchpriority="high"></div>
+        <div><h2>Veljko Pavlovic</h2><p>Technicien informatique en alternance<br>BTS SIO · Option SISR</p></div>
       </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:328px;--design-min:980;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item color layout-layer full-layer" style="--x:-632.5px;--y:0px;--w:1264.8px;--h:328px">
-  <div class="paint" style="background-color:rgba(250, 250, 250, 0.34)"></div>
-</div>
-<div class="layout-item text" style="--row:130;--x:-176.1px;--y:13px;--w:351px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">POURQUOI CE THEME ? </span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1005;--x:-280.1px;--y:100.5px;--w:609px;--h:124px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);--reveal-y:100%" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><ul style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px">
-<li>
-<p style="letter-spacing:-0.2px"><span><span style="letter-spacing:normal">Intérêt pour la virtualisation</span></span></p>
-</li>
-<li>
-<p style="letter-spacing:-0.2px"><span><span style="letter-spacing:normal">Technologie essentielle dans les infrastructures modernes</span></span></p>
-</li>
-<li>
-<p style="letter-spacing:-0.2px"><span><span style="letter-spacing:normal">Utilisation dans mon homelab</span></span></p>
-</li>
-<li>
-<p style="letter-spacing:-0.2px"><span><span style="letter-spacing:normal">Importance des solutions open source en entreprise</span></span></p>
-</li>
-<li>
-<p style="letter-spacing:-0.2px"><span><span style="letter-spacing:normal">Lien avec mon projet professionnel en SISR (2ème année)</span></span></p>
-</li>
-</ul></div>
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:522px;--design-min:1158;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:470;--x:-194.1px;--y:47px;--w:388px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">L'ÉCOSYSTÈME PROXMOX</span></h4></div>
-</div>
-<div class="layout-item image" style="--row:1545;--x:-727.1px;--y:154.5px;--w:331px;--h:241px" data-motion="fade">
-  <img src="assets/media/illustration-0ee24fe97.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:1545;--x:-279.1px;--y:154.5px;--w:85px;--h:85px">
-  <img src="assets/media/illustration-e13c58c34.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:1845;--x:-176.1px;--y:184.5px;--w:212px;--h:24.8px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700">Proxmox Mail Gateway</span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:2805;--x:-279.1px;--y:280.5px;--w:85px;--h:85px">
-  <img src="assets/media/illustration-d01ae20fc.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:3105;--x:-176.1px;--y:310.5px;--w:273px;--h:24.8px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700">Proxmox Virtual Environment</span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:1545;--x:174.9px;--y:154.5px;--w:85px;--h:85px">
-  <img src="assets/media/illustration-0342e80af.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:1845;--x:281.9px;--y:184.5px;--w:246px;--h:24.8px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700">Proxmox Backup Server</span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:2805;--x:174.9px;--y:280.5px;--w:85px;--h:85px">
-  <img src="assets/media/illustration-8798fef0f.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:3105;--x:281.9px;--y:310.5px;--w:273px;--h:24.8px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700">Proxmox Datacenter Manager</span></span></p></div>
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:556px;--design-min:1162;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:190;--x:-194.1px;--y:19px;--w:388px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">OBJECTIFS DE LA VEILLE</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1245;--x:-556.1px;--y:124.5px;--w:1113px;--h:173.6px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700"><span style="letter-spacing:normal">- Suivre les évolutions de Proxmox, </span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700"><span style="letter-spacing:normal">​</span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700"><span style="letter-spacing:normal">- Identifier les nouveautés et de comprendre sa place dans les infrastructures professionnelles.</span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700"><span style="letter-spacing:normal">​</span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="letter-spacing:normal"><span style="font-weight:700">- Rester à jour et de préparer mes futures missions dans le domaine SISR.</span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700"><span style="letter-spacing:normal">​</span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;letter-spacing:-0.2px"><span><span style="font-weight:700"><span style="letter-spacing:normal">- Mettre en relation les informations trouvées avec mon utilisation personnelle dans un environnement de test (homelab)</span></span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:1245;--x:596.9px;--y:124.5px;--w:231px;--h:206px" data-motion="fade">
-  <img src="assets/media/illustration-d9f696faf.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:911;--x:696.6px;--y:91.1px;--w:170.6px;--h:167.8px">
-  <img src="assets/media/illustration-2651e9135.png" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:541.5px;--design-min:980;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item image" style="--row:261;--x:-538px;--y:26.1px;--w:197.7px;--h:197.7px" data-motion="fade">
-  <img src="assets/media/illustration-26ded2165.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:2225;--x:-815.1px;--y:222.5px;--w:277.1px;--h:262.9px" data-motion="fade">
-  <img src="assets/media/illustration-a85c48b78.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:260;--x:-298.1px;--y:26px;--w:596px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">PROXMOX VIRTUAL ENVIRONMENT (VE)</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1810;--x:-251.1px;--y:181px;--w:502px;--h:180px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span><span style="font-weight:700">- Hyperviseur open source de type bare-metal</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span><span style="font-weight:700">- Distribution spécialisée basée sur Debian Linux</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span><span style="font-weight:700">- Gestion de machines virtuelles avec KVM</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span><span style="font-weight:700">- Support des conteneurs Linux (LXC)</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span><span style="font-weight:700">- Interface d’administration web</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span><span style="font-weight:700">- Fonctions : snapshots, sauvegardes, migration, cluster</span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:715;--x:403.9px;--y:71.5px;--w:328px;--h:261px" data-motion="fade">
-  <img src="assets/media/illustration-3a0018038.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:3640;--x:403.9px;--y:364px;--w:328px;--h:100px;--shift:44px" data-motion="slide">
-  <img src="assets/media/debian-f0cf560cb.avif" alt="debian.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:1973px;--design-min:1756;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:270;--x:-243.1px;--y:27px;--w:485px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">MÉTHODES ET OUTILS DE VEILLE</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1215;--x:-815.1px;--y:121.5px;--w:1387px;--h:96px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span>Pour assurer le suivi des évolutions de Proxmox, j’ai mis en place une méthode de veille reposant sur des <span style="color:rgb(229, 112, 0)"><span style="font-weight:700">sources officielles</span></span>, des <span style="color:rgb(229, 112, 0)"><span style="font-weight:700">médias spécialisés</span></span> et les <span style="color:rgb(229, 112, 0)"><span style="font-weight:700">retours de la communauté (forums)</span>.</span> </span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span>Cette diversité me permet d’obtenir des informations fiables et complémentaires. </span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span>La veille est réalisée de manière hebdomadaire avec une attention particulière portée aux annonces de nouvelles versions et aux correctifs de sécurité.</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">Les informations pertinentes sont ensuite analysées et synthétisées.</p></div>
-</div>
-<div class="layout-item text" style="--row:2675;--x:-854.1px;--y:267.5px;--w:1387px;--h:120px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Sources officielles :</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Site et blog <span style="font-weight:700"><span style="color:rgb(229, 112, 0)">Proxmox</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Notes de version et annonces<span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"> </p></div>
-</div>
-<div class="layout-item text" style="--row:3965;--x:-790.1px;--y:396.5px;--w:185px;--h:24px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <span style="text-decoration-line:underline;color:rgb(229, 112, 0)">Site Proxmox</span></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item image" style="--row:4205;--x:-790.1px;--y:420.5px;--w:600px;--h:335px;--reveal-clip:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);--reveal-y:-100%" data-motion="mask">
-  <img src="assets/media/image-bf9d65ba3.avif" alt="image.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:3965;--x:-57.1px;--y:396.5px;--w:185px;--h:24px;--reveal-clip:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);--reveal-y:-100%" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://pve.proxmox.com/wiki/Roadmap#Release_History"><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Proxmox Wiki</span></span></a></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item image" style="--row:4205;--x:-57.1px;--y:420.5px;--w:547px;--h:335px;--reveal-clip:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);--reveal-y:-100%" data-motion="mask">
-  <img src="assets/media/illustration-ba1664dd7.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:8085;--x:-854.1px;--y:808.5px;--w:1387px;--h:120px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Médias spécialisés :</span></span><span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span>​</span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Plateformes d’information dédiées aux infrastructures et à la virtualisation</p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Blogs techniques publiés par des professionnels du secteur</p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"> </p></div>
-</div>
-<div class="layout-item image" style="--row:9285;--x:-854.1px;--y:928.5px;--w:397px;--h:85px;--shift:-44px" data-motion="slide">
-  <img src="assets/media/image-b3d66e19c.avif" alt="image.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:10135;--x:-854.1px;--y:1013.5px;--w:185px;--h:24px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://www.it-connect.fr/?s=proxmox"><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Site d'IT-Connect</span></span></a></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item image" style="--row:9285;--x:-351.1px;--y:928.5px;--w:263px;--h:85px;--shift:-44px" data-motion="slide">
-  <img src="assets/media/image-c4db555ec.avif" alt="image.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:10135;--x:-351.1px;--y:1013.5px;--w:185px;--h:24px;--shift:-44px" data-motion="slide">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://www.reddit.com/r/Proxmox/"><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Reddit - Proxmox </span></span></a></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item text" style="--row:10905;--x:-854.1px;--y:1090.5px;--w:1387px;--h:120px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Communauté :</span></span><span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Forum Proxmox</p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Discussions entre utilisateurs/administrateurs</p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"> </p></div>
-</div>
-<div class="layout-item image" style="--row:12105;--x:-854.1px;--y:1210.5px;--w:397px;--h:85px;--shift:-44px" data-motion="slide">
-  <img src="assets/media/illustration-ec652f11c.avif" alt="vdfbvdfb.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:12955;--x:-854.1px;--y:1295.5px;--w:185px;--h:24px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://forum.proxmox.com/"><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Forum Proxmox</span></span></a></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item text" style="--row:13455;--x:-854.1px;--y:1345.5px;--w:1387px;--h:120px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Alertes automatiques :</span></span><span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span>​</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Google Alertes</p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Newsletter Proxmox </p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px">- Abonnement à la liste de diffusion Proxmox</p></div>
-</div>
-<div class="layout-item image" style="--row:14885;--x:-854.1px;--y:1488.5px;--w:600px;--h:364px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <img src="assets/media/image-1cc90df1e.avif" alt="image.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:14885;--x:-199.1px;--y:1488.5px;--w:600px;--h:232px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <img src="assets/media/image-6f1f8f9d6.avif" alt="image.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:14885;--x:419.9px;--y:1488.5px;--w:445px;--h:126px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <img src="assets/media/image-0ae59082f.avif" alt="image.png" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:16145;--x:419.9px;--y:1614.5px;--w:275px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://www.proxmox.com/en/"><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Site Proxmox</span></span></a></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item text" style="--row:17215;--x:-199.1px;--y:1721.5px;--w:275px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://lists.proxmox.com/postorius/lists/?count=25&amp;all-lists="><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Listes de diffusion - Proxmox</span></span></a></span></span><span>​</span></p></div>
-</div>
-<div class="layout-item text" style="--row:18535;--x:-854.1px;--y:1853.5px;--w:185px;--h:24px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span style="font-weight:700">Lien : <a href="https://www.google.fr/alerts#"><span style="color:rgb(229, 112, 0)"><span style="text-decoration-line:underline">Google Alertes</span></span></a></span></span><span>​</span></p></div>
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:1154px;--design-min:1244;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:260;--x:-136.1px;--y:26px;--w:271px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">FORME JURIDIQUE</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1485;--x:-598.1px;--y:148.5px;--w:734px;--h:90px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span style="font-weight:700"><span>- Utilisation gratuite (particuliers &amp; entreprises) </span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span style="font-weight:700"><span>- Code modifiable et redistribuable </span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span style="font-weight:700"><span>- Licence copyleft (obligation de publier les modifications si service en ligne) </span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:1025;--x:237.9px;--y:102.5px;--w:438px;--h:183px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);--reveal-y:100%" data-motion="mask">
-  <img src="assets/media/illustration-ecef01c17.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item text" style="--row:2945;--x:-598.1px;--y:294.5px;--w:734px;--h:30px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span style="font-weight:700"><span>Développé par : Proxmox Server Solutions GmbH, société autrichienne</span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:3595;--x:-598.1px;--y:359.5px;--w:734px;--h:60px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:20px;line-height:30px;letter-spacing:-0.2px"><span style="font-weight:700"><span>Des abonnements payants existent pour le support professionnel.<br>
-La responsabilité juridique (RGPD, données hébergées) revient à l’utilisateur.</span></span></p></div>
-</div>
-<div class="layout-item image" style="--row:4930;--x:-445.1px;--y:493px;--w:205px;--h:495px;--reveal-clip:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" data-motion="mask">
-  <img src="assets/media/illustration-88e89ca02.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:4930;--x:-219.1px;--y:493px;--w:209px;--h:495px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <img src="assets/media/illustration-697521512.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:4930;--x:7.9px;--y:493px;--w:207px;--h:495px;--reveal-clip:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" data-motion="mask">
-  <img src="assets/media/illustration-52c629f7a.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-<div class="layout-item image" style="--row:4930;--x:235.9px;--y:493px;--w:207px;--h:495px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <img src="assets/media/illustration-a692e8f17.avif" alt="" style="background-color:rgba(0, 0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-radius:0px;border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);box-shadow:none;filter:none;object-fit:cover;object-position:50% 50%" decoding="async">
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:1439px;--design-min:1756;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:0;--x:-317.1px;--y:0px;--w:633px;--h:45.5px">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">NOUVEAUTÉS ET ÉVOLUTIONS OBSERVÉES</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:915;--x:-854.1px;--y:91.5px;--w:817px;--h:48px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span>Au moment de la mise en place de ma veille, la version la plus récente de <span style="font-weight:700">Proxmox VE</span> était la <span style="color:rgb(229, 112, 0)"><span style="font-weight:700">9.1</span></span>. </span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span>Son analyse m’a permis de comprendre les évolutions récentes et les priorités de développement de la solution.</span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:1545;--x:-854.1px;--y:154.5px;--w:477px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Source(s) :</span> <span style="text-decoration-line:underline"><a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1" style="text-decoration-line:none">&quot;Proxmox Virtual Environment 9.1 available&quot; - Proxmox</a></span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:1785;--x:-854.1px;--y:178.5px;--w:477px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Date de sortie  :</span> <span>19 Novembre 2025</span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:2645;--x:-854.1px;--y:264.5px;--w:764px;--h:45.5px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">- Support des images OCI pour les conteneurs</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:3160;--x:-854.1px;--y:316px;--w:477px;--h:21px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:14px;line-height:21px;letter-spacing:-0.14px"><span><span><span style="font-weight:700">Source(s) :</span> <span style="text-decoration-line:underline"><a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1" style="text-decoration-line:none">&quot;Proxmox Virtual Environment 9.1 available&quot; - Proxmox</a></span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:3730;--x:-854.1px;--y:373px;--w:1246px;--h:48px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700"><span>Résumé </span>:</span> <span>Cette évolution permet d’utiliser des modèles de conteneurs basés sur un standard largement répandu dans l’écosystème de la virtualisation et du cloud. </span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span>Elle simplifie la création et le déploiement de nouveaux environnements.</span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:4550;--x:-854.1px;--y:455px;--w:1246px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Impact : </span>Le déploiement devient plus rapide et mieux aligné avec les pratiques modernes utilisées en entreprise.</span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:5060;--x:-854.1px;--y:506px;--w:1246px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Cette évolution peut faciliter le déploiement rapide de services dans des environnements de test ou de production.</span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:5970;--x:-854.1px;--y:597px;--w:764px;--h:45.5px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">- Amélioration de la virtualisation imbriquée</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:6485;--x:-854.1px;--y:648.5px;--w:477px;--h:21px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:14px;line-height:21px;letter-spacing:-0.14px"><span><span><span style="font-weight:700">Source(s) :</span> <span style="text-decoration-line:underline"><a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1" style="text-decoration-line:none">&quot;Proxmox Virtual Environment 9.1 available&quot; - Proxmox</a></span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:7055;--x:-854.1px;--y:705.5px;--w:1558px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700"><span>Résumé </span>:</span> <span>La virtualisation imbriquée permet d’exécuter un hyperviseur à l’intérieur d’une machine virtuelle. Cette amélioration rend son utilisation plus simple et plus stable dans les environnements virtualisés.</span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:7635;--x:-854.1px;--y:763.5px;--w:1246px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Impact : </span>Elle facilite la mise en place de laboratoires de test, de formations ou de simulations d’infrastructures sans nécessiter de matériel supplémentaire.</span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:8145;--x:-854.1px;--y:814.5px;--w:1246px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Cette évolution peut être particulièrement utile pour expérimenter différentes architectures ou reproduire des scénarios d’entreprise.</span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:8985;--x:-853.1px;--y:898.5px;--w:923px;--h:45.5px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">- Amélioration du support du TPM pour les machines virtuelles</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:9500;--x:-853.1px;--y:950px;--w:477px;--h:21px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:14px;line-height:21px;letter-spacing:-0.14px"><span><span><span style="font-weight:700">Source(s) :</span> <span style="text-decoration-line:underline"><a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1" style="text-decoration-line:none">&quot;Proxmox Virtual Environment 9.1 available&quot; - Proxmox</a></span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:10070;--x:-853.1px;--y:1007px;--w:1558px;--h:48px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700"><span>Résumé </span>:</span> <span>Cette évolution améliore la gestion du module de sécurité TPM au sein des machines virtuelles. </span></span></span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span>E</span></span></span><span><span><span>lle permet une meilleure prise en charge des mécanismes de protection exigés par les systèmes récents, notamment certaines versions de Windows.</span></span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:10850;--x:-853.1px;--y:1085px;--w:1246px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Impact : </span>Les administrateurs peuvent déployer plus facilement des environnements virtualisés répondant aux exigences de sécurité actuelles dans les entreprises.</span></span></p></div>
-</div>
-<div class="layout-item text" style="--row:11360;--x:-853.1px;--y:1136px;--w:1246px;--h:24px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span><span><span style="font-weight:700">Cette amélioration favorise l’intégration de systèmes modernes tout en respectant les standards de protection attendus dans une infrastructure professionnelle.</span></span></span></p></div>
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:349px;--design-min:1458;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:190;--x:-178.1px;--y:19px;--w:356px;--h:45.5px" data-motion="fade">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">SYNTHÈSE DE LA VEILLE</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1255;--x:-666.1px;--y:125.5px;--w:1371px;--h:72px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span style="font-weight:700">Cette veille m’a permis de constater que Proxmox évolue vers des solutions toujours plus modernes, plus simples à déployer et mieux adaptées aux exigences de sécurité des entreprises.</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span style="font-weight:700">Les améliorations observées montrent une volonté de faciliter le travail des administrateurs tout en assurant une meilleure compatibilité avec les systèmes récents.</span></p>
-
-<p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span style="font-weight:700">Ce suivi régulier m’a aidé à mieux comprendre les enjeux actuels de la virtualisation et à développer ma capacité d’analyse face aux évolutions technologiques.</span></p></div>
-</div>
-      </div>
-      
-    </section>
-    <section class="design-section" style="--section-h:425px;--design-min:1196;background-color:rgba(0, 0, 0, 0)">
-      <div class="design-stage">
-        <div class="layout-item text" style="--row:190;--x:-262.1px;--y:19px;--w:563px;--h:45.5px" data-motion="fade">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><h4 style="font-family:familjen-grotesk, &quot;familjen grotesk&quot;, sans-serif;--font-size:35px;font-weight:700;line-height:45.5px;letter-spacing:-1.05px"><span style="color:rgb(229, 112, 0)">APPRENTISSAGES ISSUS DE LA VEILLE</span></h4></div>
-</div>
-<div class="layout-item text" style="--row:1380;--x:-574.1px;--y:138px;--w:1148px;--h:72px;--reveal-clip:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" data-motion="mask">
-  <div style="font-family:Arial, Helvetica, sans-serif;--font-size:10px;font-weight:400;font-style:normal;line-height:normal;letter-spacing:normal;text-align:start;text-decoration-line:none;text-transform:none;color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);white-space:normal;text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;list-style-type:disc;padding-left:0px"><p style="font-family:madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;--font-size:16px;line-height:24px;letter-spacing:-0.16px"><span style="font-weight:700">Cette veille m’a permis d’améliorer ma compréhension des environnements virtualisés et des enjeux actuels liés à leur évolution.<br>
-Elle renforce ma capacité à identifier les nouveautés technologiques, à anticiper les impacts en entreprise et à intégrer davantage les aspects liés à la sécurité.<br>
-Ce travail contribue à développer ma rigueur professionnelle et ma préparation aux futures missions d’administration systèmes et réseaux.</span></p></div>
-</div>
-<div class="layout-item button" style="--row:3330;--x:-121.1px;--y:333px;--w:242px;--h:40px">
-  <a class="site-button" href="assets/documents/resume-veille-proxmox.pdf" download style="background-color:rgb(0, 0, 0);border-bottom:0.8px solid rgb(95, 91, 205);border-left:0.8px solid rgb(95, 91, 205);border-radius:50px;border-right:0.8px solid rgb(95, 91, 205);border-top:0.8px solid rgb(95, 91, 205);box-shadow:rgba(255, 113, 74, 0.7) 1px 0px 6px 3px;color:#e57000;filter:none;font-family:avenir-light, Arial, sans-serif;font-size:15px;font-style:normal;font-weight:700;letter-spacing:normal;line-height:normal;list-style-type:disc;object-fit:fill;object-position:50% 50%;padding-left:0px;text-align:start;text-decoration-line:none;text-shadow:none;text-transform:none;white-space:normal" aria-label="TÉLÉCHARGER LE RÉSUMÉ">TÉLÉCHARGER LE RÉSUMÉ</a>
-</div>
-      </div>
-      
-    </section>
-  </main>
-  <footer class="site-footer">
-    <a class="footer-brand" href="index.html">Portfolio</a>
-    <address>
-      <a href="tel:+33766545272">07 66 54 52 72</a>
-      <a href="mailto:veljkoreper@gmail.com">veljkoreper@gmail.com</a>
-      <a class="linkedin" href="https://www.linkedin.com/in/veljko-pavlovic-36444b308" aria-label="LinkedIn">in</a>
-    </address>
-  </footer>
+      <div class="status"><i></i><span><b>En alternance chez EPI</b><small>Étudiant à Paris School of Technology &amp; Business</small></span></div>
+      <section class="contacts"><h3>Me contacter</h3><a href="https://www.linkedin.com/in/veljko-pavlovic-36444b308"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v9m0-14v.1M10 19v-9m0 5a4 4 0 0 1 8 0v4"/></svg><span>LinkedIn</span></a><a href="https://github.com/Vpav2004"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1-4-2-6-2m12 4v-4a3.5 3.5 0 0 0-1-2c3 0 6-1 6-5a4 4 0 0 0-1-3 4 4 0 0 0 0-3s-1-1-4 1a11 11 0 0 0-6 0C6 3 5 4 5 4a4 4 0 0 0 0 3 4 4 0 0 0-1 3c0 4 3 5 6 5a3.5 3.5 0 0 0-1 2v4"/></svg><span>GitHub</span></a><a href="mailto:veljkoreper@gmail.com"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>veljkoreper@gmail.com</span></a><a href="tel:+33766545272"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 3 5-2 2a13 13 0 0 0 6 6l2-2 5 3v2a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2z"/></svg><span>07 66 54 52 72</span></a></section>
+      <a class="button primary cv-download" href="assets/documents/cv-veljko-pavlovic.pdf" download><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg> Télécharger mon CV</a>
+    </aside>
+      <main id="contenu" tabindex="-1">
+        <div class="page-heading"><p class="eyebrow">Veille technologique</p><h1>Proxmox</h1><p class="lede">Virtualisation, actualités et applications dans mon homelab.</p><div class="actions"><a class="button primary" href="assets/documents/resume-veille-proxmox.pdf" download><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg> Télécharger le résumé</a></div></div><nav class="section-nav" aria-label="Dans cette page"><a class="pill" href="#section-2">POURQUOI CE THEME ?</a><a class="pill" href="#section-3">L&#x27;ÉCOSYSTÈME PROXMOX</a><a class="pill" href="#section-6">MÉTHODES ET OUTILS DE VEILLE</a><a class="pill" href="#section-8">NOUVEAUTÉS ET ÉVOLUTIONS OBSERVÉES</a><a class="pill" href="#section-9">SYNTHÈSE DE LA VEILLE</a></nav><section class="detail-section card scene" id="section-1" data-reveal><h2>Proxmox</h2><figure class="artwork wide-artwork" aria-label="Bannière Proxmox sur fond de salle serveur" style="--art-width:1264.8px;aspect-ratio:1264.80/351.00"><img src="assets/media/illustration-1ca184522.avif" alt="" decoding="async" style="left:0.0000%;top:0.0000%;width:100.0000%;height:100.0000%" loading="lazy"><img src="assets/media/illustration-ec652f11c.avif" alt="" decoding="async" style="left:23.9880%;top:17.6638%;width:52.0240%;height:38.7464%" loading="lazy"></figure><div class="prose"><div>
+  <div><p>Veljko PAVLOVIC - BTS SIO</p></div>
+</div><div>
+  <div><p>Solutions d'entreprise open source sécurisées, flexibles et fiables.</p>
+
+<p>Pour les environnements informatiques professionnels les plus exigeants et les budgets les plus serrés.</p></div>
+</div></div></section><section class="detail-section card " id="section-2" data-reveal><h2>POURQUOI CE THEME ?</h2><div class="prose"><div data-motion="mask">
+  <div><ul>
+<li>
+<p>Intérêt pour la virtualisation</p>
+</li>
+<li>
+<p>Technologie essentielle dans les infrastructures modernes</p>
+</li>
+<li>
+<p>Utilisation dans mon homelab</p>
+</li>
+<li>
+<p>Importance des solutions open source en entreprise</p>
+</li>
+<li>
+<p>Lien avec mon projet professionnel en SISR (2ème année)</p>
+</li>
+</ul></div>
+</div></div></section><section class="detail-section card" id="section-3" data-reveal><h2>L&#x27;ÉCOSYSTÈME PROXMOX</h2><div class="context-section"><div class="context-ecosystem"><figure class="media-tile"><img src="assets/media/illustration-0ee24fe97.avif" alt="" decoding="async" loading="lazy"></figure><div class="context-grid columns-2"><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-e13c58c34.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
+  <div><p>Proxmox Mail Gateway</p></div>
+</div></div></div><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-0342e80af.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
+  <div><p>Proxmox Backup Server</p></div>
+</div></div></div><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-d01ae20fc.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
+  <div><p>Proxmox Virtual Environment</p></div>
+</div></div></div><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-8798fef0f.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
+  <div><p>Proxmox Datacenter Manager</p></div>
+</div></div></div></div></div></div></section><section class="detail-section card" id="section-4" data-reveal><h2>OBJECTIFS DE LA VEILLE</h2><div class="context-section"><div class="context-pair"><div class="prose"><div>
+  <div><p>- Suivre les évolutions de Proxmox, </p>
+
+
+
+<p>- Identifier les nouveautés et de comprendre sa place dans les infrastructures professionnelles.</p>
+
+
+
+<p>- Rester à jour et de préparer mes futures missions dans le domaine SISR.</p>
+
+
+
+<p>- Mettre en relation les informations trouvées avec mon utilisation personnelle dans un environnement de test (homelab)</p></div>
+</div></div><div class="context-media"><figure class="artwork" aria-label="Cible et flèche des objectifs de la veille" style="--art-width:270.3px;aspect-ratio:270.30/239.40"><img src="assets/media/illustration-d9f696faf.avif" alt="" decoding="async" style="left:0.0000%;top:13.9515%;width:85.4606%;height:86.0485%" loading="lazy"><img src="assets/media/illustration-2651e9135.png" alt="" decoding="async" style="left:36.8849%;top:0.0000%;width:63.1151%;height:70.0919%" loading="lazy"></figure></div></div></div></section><section class="detail-section card" id="section-5" data-reveal><h2>PROXMOX VIRTUAL ENVIRONMENT (VE)</h2><div class="context-section"><div class="context-overview context-technical"><div class="context-media"><figure class="media-tile"><img src="assets/media/illustration-26ded2165.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile"><img src="assets/media/illustration-a85c48b78.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
+  <div><p>- Hyperviseur open source de type bare-metal</p>
+
+<p>- Distribution spécialisée basée sur Debian Linux</p>
+
+<p>- Gestion de machines virtuelles avec KVM</p>
+
+<p>- Support des conteneurs Linux (LXC)</p>
+
+<p>- Interface d’administration web</p>
+
+<p>- Fonctions : snapshots, sauvegardes, migration, cluster</p></div>
+</div></div><div class="context-media"><figure class="artwork" aria-label="Illustration et logo Debian" style="--art-width:328.0px;aspect-ratio:328.00/392.50"><img src="assets/media/illustration-3a0018038.avif" alt="" decoding="async" style="left:0.0000%;top:0.0000%;width:100.0000%;height:66.4968%" loading="lazy"><img src="assets/media/debian-f0cf560cb.avif" alt="" decoding="async" style="left:0.0000%;top:74.5223%;width:100.0000%;height:25.4777%" loading="lazy"></figure></div></div></div></section><section class="detail-section card" id="section-6" data-reveal><h2>MÉTHODES ET OUTILS DE VEILLE</h2><div class="context-section"><div class="prose"><div data-motion="mask">
+  <div><p>Pour assurer le suivi des évolutions de Proxmox, j’ai mis en place une méthode de veille reposant sur des sources officielles, des médias spécialisés et les retours de la communauté (forums). </p>
+
+<p>Cette diversité me permet d’obtenir des informations fiables et complémentaires. </p>
+
+<p>La veille est réalisée de manière hebdomadaire avec une attention particulière portée aux annonces de nouvelles versions et aux correctifs de sécurité.</p>
+
+<p>Les informations pertinentes sont ensuite analysées et synthétisées.</p></div>
+</div></div><section class="context-topic"><h3>Sources officielles</h3><div class="prose"><div data-motion="mask">
+  <div>
+
+
+
+<p>- Site et blog Proxmox</p>
+
+<p>- Notes de version et annonces​</p>
+
+</div>
+</div></div><div class="context-grid columns-2"><div class="context-caption"><div class="prose"><div>
+  <div><p>Lien : Site Proxmox​</p></div>
+</div></div><figure class="media-tile"><img src="assets/media/image-bf9d65ba3.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="context-caption"><div class="prose"><div data-motion="mask">
+  <div><p>Lien : <a href="https://pve.proxmox.com/wiki/Roadmap#Release_History">Proxmox Wiki</a>​</p></div>
+</div></div><figure class="media-tile"><img src="assets/media/illustration-ba1664dd7.avif" alt="" decoding="async" loading="lazy"></figure></div></div></section><section class="context-topic"><h3>Médias spécialisés</h3><div class="prose"><div data-motion="mask">
+  <div>
+
+
+
+<p>- Plateformes d’information dédiées aux infrastructures et à la virtualisation</p>
+
+<p>- Blogs techniques publiés par des professionnels du secteur</p>
+
+</div>
+</div></div><div class="context-grid columns-2"><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/image-b3d66e19c.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div>
+  <div><p>Lien : <a href="https://www.it-connect.fr/?s=proxmox">Site d'IT-Connect</a>​</p></div>
+</div></div></div><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/image-c4db555ec.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div data-motion="slide">
+  <div><p>Lien : <a href="https://www.reddit.com/r/Proxmox/">Reddit - Proxmox </a>​</p></div>
+</div></div></div></div></section><section class="context-topic"><h3>Communauté</h3><div class="prose"><div data-motion="mask">
+  <div>
+
+
+
+<p>- Forum Proxmox</p>
+
+<p>- Discussions entre utilisateurs/administrateurs</p>
+
+</div>
+</div></div><div class="context-grid columns-1"><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/illustration-ec652f11c.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div>
+  <div><p>Lien : <a href="https://forum.proxmox.com/">Forum Proxmox</a>​</p></div>
+</div></div></div></div></section><section class="context-topic"><h3>Alertes automatiques</h3><div class="prose"><div data-motion="mask">
+  <div>
+
+
+
+<p>- Google Alertes</p>
+
+<p>- Newsletter Proxmox </p>
+
+<p>- Abonnement à la liste de diffusion Proxmox</p></div>
+</div></div><div class="context-grid columns-3"><div class="context-caption"><figure class="media-tile"><img src="assets/media/image-1cc90df1e.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div>
+  <div><p>Lien : <a href="https://www.google.fr/alerts#">Google Alertes</a>​</p></div>
+</div></div></div><div class="context-caption"><figure class="media-tile"><img src="assets/media/image-6f1f8f9d6.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div data-motion="mask">
+  <div><p>Lien : <a href="https://lists.proxmox.com/postorius/lists/?count=25&amp;all-lists=">Listes de diffusion - Proxmox</a>​</p></div>
+</div></div></div><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/image-0ae59082f.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div data-motion="mask">
+  <div><p>Lien : <a href="https://www.proxmox.com/en/">Site Proxmox</a>​</p></div>
+</div></div></div></div></section></div></section><section class="detail-section card" id="section-7" data-reveal><h2>FORME JURIDIQUE</h2><div class="context-section"><div class="context-pair"><div class="prose"><div>
+  <div><p>- Utilisation gratuite (particuliers &amp; entreprises) </p>
+
+<p>- Code modifiable et redistribuable </p>
+
+<p>- Licence copyleft (obligation de publier les modifications si service en ligne) </p></div>
+</div><div>
+  <div><p>Développé par : Proxmox Server Solutions GmbH, société autrichienne</p></div>
+</div></div><div class="context-media"><figure class="media-tile"><img src="assets/media/illustration-ecef01c17.avif" alt="" decoding="async" loading="lazy"></figure></div></div><div class="prose"><div>
+  <div><p>Des abonnements payants existent pour le support professionnel.<br>
+La responsabilité juridique (RGPD, données hébergées) revient à l’utilisateur.</p></div>
+</div></div><div class="context-grid columns-4"><figure class="media-tile vertical"><img src="assets/media/illustration-88e89ca02.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile vertical"><img src="assets/media/illustration-697521512.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile vertical"><img src="assets/media/illustration-52c629f7a.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile vertical"><img src="assets/media/illustration-a692e8f17.avif" alt="" decoding="async" loading="lazy"></figure></div></div></section><section class="detail-section card " id="section-8" data-reveal><h2>NOUVEAUTÉS ET ÉVOLUTIONS OBSERVÉES</h2><div class="prose"><div data-motion="mask">
+  <div><p>Au moment de la mise en place de ma veille, la version la plus récente de Proxmox VE était la 9.1. </p>
+
+<p>Son analyse m’a permis de comprendre les évolutions récentes et les priorités de développement de la solution.</p></div>
+</div><div data-motion="mask">
+  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
+</div><div data-motion="mask">
+  <div><p>Date de sortie  : 19 Novembre 2025</p></div>
+</div><div data-motion="mask">
+  <div><h3>- Support des images OCI pour les conteneurs</h3></div>
+</div><div data-motion="mask">
+  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
+</div><div data-motion="mask">
+  <div><p>Résumé : Cette évolution permet d’utiliser des modèles de conteneurs basés sur un standard largement répandu dans l’écosystème de la virtualisation et du cloud. </p>
+
+<p>Elle simplifie la création et le déploiement de nouveaux environnements.</p></div>
+</div><div data-motion="mask">
+  <div><p>Impact : Le déploiement devient plus rapide et mieux aligné avec les pratiques modernes utilisées en entreprise.</p></div>
+</div><div data-motion="mask">
+  <div><p>Cette évolution peut faciliter le déploiement rapide de services dans des environnements de test ou de production.</p></div>
+</div><div data-motion="mask">
+  <div><h3>- Amélioration de la virtualisation imbriquée</h3></div>
+</div><div data-motion="mask">
+  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
+</div><div data-motion="mask">
+  <div><p>Résumé : La virtualisation imbriquée permet d’exécuter un hyperviseur à l’intérieur d’une machine virtuelle. Cette amélioration rend son utilisation plus simple et plus stable dans les environnements virtualisés.</p></div>
+</div><div data-motion="mask">
+  <div><p>Impact : Elle facilite la mise en place de laboratoires de test, de formations ou de simulations d’infrastructures sans nécessiter de matériel supplémentaire.</p></div>
+</div><div data-motion="mask">
+  <div><p>Cette évolution peut être particulièrement utile pour expérimenter différentes architectures ou reproduire des scénarios d’entreprise.</p></div>
+</div><div data-motion="mask">
+  <div><h3>- Amélioration du support du TPM pour les machines virtuelles</h3></div>
+</div><div data-motion="mask">
+  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
+</div><div data-motion="mask">
+  <div><p>Résumé : Cette évolution améliore la gestion du module de sécurité TPM au sein des machines virtuelles. </p>
+
+<p>Elle permet une meilleure prise en charge des mécanismes de protection exigés par les systèmes récents, notamment certaines versions de Windows.</p></div>
+</div><div data-motion="mask">
+  <div><p>Impact : Les administrateurs peuvent déployer plus facilement des environnements virtualisés répondant aux exigences de sécurité actuelles dans les entreprises.</p></div>
+</div><div data-motion="mask">
+  <div><p>Cette amélioration favorise l’intégration de systèmes modernes tout en respectant les standards de protection attendus dans une infrastructure professionnelle.</p></div>
+</div></div></section><section class="detail-section card " id="section-9" data-reveal><h2>SYNTHÈSE DE LA VEILLE</h2><div class="prose"><div data-motion="mask">
+  <div><p>Cette veille m’a permis de constater que Proxmox évolue vers des solutions toujours plus modernes, plus simples à déployer et mieux adaptées aux exigences de sécurité des entreprises.</p>
+
+<p>Les améliorations observées montrent une volonté de faciliter le travail des administrateurs tout en assurant une meilleure compatibilité avec les systèmes récents.</p>
+
+<p>Ce suivi régulier m’a aidé à mieux comprendre les enjeux actuels de la virtualisation et à développer ma capacité d’analyse face aux évolutions technologiques.</p></div>
+</div></div></section><section class="detail-section card " id="section-10" data-reveal><h2>APPRENTISSAGES ISSUS DE LA VEILLE</h2><div class="prose"><div data-motion="mask">
+  <div><p>Cette veille m’a permis d’améliorer ma compréhension des environnements virtualisés et des enjeux actuels liés à leur évolution.<br>
+Elle renforce ma capacité à identifier les nouveautés technologiques, à anticiper les impacts en entreprise et à intégrer davantage les aspects liés à la sécurité.<br>
+Ce travail contribue à développer ma rigueur professionnelle et ma préparation aux futures missions d’administration systèmes et réseaux.</p></div>
+</div></div><div class="actions"><a class="button primary" href="assets/documents/resume-veille-proxmox.pdf" download><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>TÉLÉCHARGER LE RÉSUMÉ</a></div></section>
+      </main>
+    </div>
+    <footer><span>Veljko Pavlovic · BTS SIO SISR</span><a href="#portfolio">Haut de page ↑</a></footer>
+  </div>
 </body>
 </html>
