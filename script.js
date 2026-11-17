@@ -174,3 +174,34 @@ if (gallery && photos.length) {
   gallery.addEventListener('click', event => { if (event.target === gallery) gallery.close(); });
   gallery.addEventListener('close', () => opener?.focus());
 }
+
+
+// Visionneuse de CV : aperçu PDF natif, téléchargement et contrôle du zoom.
+const cvModal = document.querySelector('#cv-modal');
+const cvOpen = document.querySelector('[data-cv-open]');
+if (cvModal && cvOpen) {
+  const viewer = cvModal.querySelector('.cv-modal-pdf');
+  const zoomLabel = cvModal.querySelector('#cv-zoom-value');
+  const minus = cvModal.querySelector('[data-cv-zoom="out"]');
+  const plus = cvModal.querySelector('[data-cv-zoom="in"]');
+  const levels = [50, 75, 100, 125, 150, 175, 200];
+  let levelIndex = 2;
+  const updateZoom = () => {
+    const zoom = levels[levelIndex];
+    zoomLabel.textContent = `${zoom} %`;
+    minus.disabled = levelIndex === 0;
+    plus.disabled = levelIndex === levels.length - 1;
+    // Le lecteur PDF intégré interprète #zoom dans les navigateurs compatibles.
+    viewer.src = `${viewer.dataset.cvSrc}#toolbar=0&navpanes=0&zoom=${zoom}`;
+  };
+  cvOpen.addEventListener('click', () => {
+    levelIndex = 2;
+    updateZoom();
+    cvModal.showModal();
+  });
+  minus.addEventListener('click', () => { if (levelIndex > 0) { levelIndex--; updateZoom(); } });
+  plus.addEventListener('click', () => { if (levelIndex < levels.length - 1) { levelIndex++; updateZoom(); } });
+  cvModal.querySelector('[data-cv-close]').addEventListener('click', () => cvModal.close());
+  cvModal.addEventListener('click', event => { if (event.target === cvModal) cvModal.close(); });
+  cvModal.addEventListener('close', () => { viewer.removeAttribute('src'); cvOpen.focus(); });
+}
