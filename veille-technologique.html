@@ -4,10 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0d13">
-  <meta name="description" content="Portfolio de Veljko Pavlovic, alternant technicien informatique et étudiant en BTS SIO option SISR.">
-  <title>Veille | Veljko Pavlovic</title>
+  <meta name="description" content="Veille BTS SIO SISR sur le détournement de sessions web : schémas, chronologie et protections.">
+  <title>Vol de cookies de session · Veille | Veljko Pavlovic</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+<style>
+.watch{--watch-aqua:#78e5d1;--watch-line:#31445f;--watch-deep:#0f1a29;scroll-margin-top:18px}
+.watch .watch-hero{padding:clamp(20px,4vw,47px);background:radial-gradient(ellipse at 88% 0,#24486a88,transparent 63%),linear-gradient(125deg,#18263d,#141e2e);border-color:#3d5778}
+.watch h1{margin:.24em 0;font-size:clamp(2rem,4.8vw,4.55rem);letter-spacing:-.061em;overflow-wrap:anywhere}
+.watch h1 span{color:var(--watch-aqua)}
+.watch-question{max-width:56ch;color:#d5e4fa;font-size:clamp(1rem,2vw,1.27rem)}
+.watch-flow,.watch-sequence{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:19px 0}
+.watch-flow span,.watch-sequence li,.watch-kind,.watch-route{padding:6px 11px;background:#15263e;border:1px solid #3b5578;border-radius:9px;color:#d7e7ff}
+.watch-flow b{color:var(--watch-aqua)}
+.watch-updated{font-size:.81rem;color:var(--muted)}
+.watch-nav,.watch-controls{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.watch-nav a{padding:6px 10px;font-size:.83rem;color:#c6d7ef;background:#172131;border:1px solid var(--watch-line);border-radius:8px;text-decoration:none}
+.watch-nav a:hover{border-color:var(--accent)}
+.watch-section{padding:clamp(17px,2.5vw,27px);margin:14px 0;scroll-margin-top:16px;overflow-wrap:anywhere}
+.watch-section h2{margin:0 0 11px}
+.watch-section p,.watch-section dd,.watch-sources{color:var(--muted)}
+.watch-section p+p{margin-top:.65em}
+.watch-section h3{margin:0 0 8px}
+.watch-panel,.watch-event,.watch-note{padding:clamp(12px,2vw,18px);background:var(--watch-deep);border:1px solid var(--watch-line);border-radius:12px;min-width:0}
+.watch-diagram,.watch-timeline,.watch-protection-grid,.watch-fields{display:grid;gap:12px;margin:15px 0}
+.watch-panel .watch-route{display:table;margin:9px 0;color:var(--watch-aqua);font-family:var(--mono);font-size:.83rem}
+.watch-sequence{padding:0;list-style:none;counter-reset:scenario}
+.watch-sequence li::before{counter-increment:scenario;content:counter(scenario) ". ";color:var(--watch-aqua)}
+.watch-warning{border-color:#896452}
+.watch-warning .watch-sequence li{background:#302525;border-color:#795d53}
+.watch-note{margin-top:15px}
+.watch-note summary{cursor:pointer;font-weight:700}
+.watch-note[open] p{margin-top:8px}
+.watch-timeline{border-inline-start:2px solid #45678f;padding-inline-start:14px}
+.watch-event{position:relative}
+.watch-event::before{content:"";position:absolute;inset:22px auto auto -20px;width:9px;height:9px;background:var(--accent);border-radius:50%}
+.watch-event-meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:10px;color:#b6d3fc;font-size:.85rem}
+.watch-kind{padding:2px 8px;font-size:.77rem}
+.watch-event dl,.watch-fields{margin:12px 0}
+.watch-event dl div+div{margin-top:8px}
+.watch-section dt{font-weight:700;color:var(--text)}
+.watch-section dd{margin:0}
+.watch-source{display:inline-block;margin-top:10px;font-size:.84rem}
+.watch-protection-grid,.watch-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+.watch-sources{padding-inline-start:1.25rem}
+.watch-fields div{padding:12px;background:var(--watch-deep);border-radius:8px}
+.watch .watch-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.watch button:disabled{opacity:.55;cursor:default;transform:none}
+.watch-panel:not([hidden]),.watch-event:not([hidden]){animation:watch-appear .18s ease-out}
+@keyframes watch-appear{from{opacity:.66;transform:translateY(3px)}to{opacity:1;transform:none}}
+@media(max-width:580px){.watch-protection-grid,.watch-fields{grid-template-columns:1fr}.watch-break{display:none}.watch-controls{gap:6px}.watch-nav a,.watch-controls .pill{min-height:38px}.watch-timeline{padding-inline-start:11px}.watch-event::before{inset-inline-start:-17px}}
+@media(prefers-reduced-motion:reduce){.watch *{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Passer au contenu principal</a>
@@ -37,196 +85,199 @@
       <section class="contacts"><h3>Me contacter</h3><a href="https://www.linkedin.com/in/veljko-pavlovic-36444b308"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10v9m0-14v.1M10 19v-9m0 5a4 4 0 0 1 8 0v4"/></svg><span>LinkedIn</span></a><a href="https://github.com/Vpav2004"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1-4-2-6-2m12 4v-4a3.5 3.5 0 0 0-1-2c3 0 6-1 6-5a4 4 0 0 0-1-3 4 4 0 0 0 0-3s-1-1-4 1a11 11 0 0 0-6 0C6 3 5 4 5 4a4 4 0 0 0 0 3 4 4 0 0 0-1 3c0 4 3 5 6 5a3.5 3.5 0 0 0-1 2v4"/></svg><span>GitHub</span></a><a href="mailto:veljkoreper@gmail.com"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>veljkoreper@gmail.com</span></a><a href="tel:+33766545272"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 3 5-2 2a13 13 0 0 0 6 6l2-2 5 3v2a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2z"/></svg><span>07 66 54 52 72</span></a></section>
       <a class="button primary cv-download" href="assets/documents/cv-veljko-pavlovic.pdf" download><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg> Télécharger mon CV</a>
     </aside>
-      <main id="contenu" tabindex="-1">
-        <div class="page-heading"><p class="eyebrow">Veille technologique</p><h1>Proxmox</h1><p class="lede">Virtualisation, actualités et applications dans mon homelab.</p><div class="actions"><a class="button primary" href="assets/documents/resume-veille-proxmox.pdf" download><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg> Télécharger le résumé</a></div></div><nav class="section-nav" aria-label="Dans cette page"><a class="pill" href="#section-2">POURQUOI CE THEME ?</a><a class="pill" href="#section-3">L&#x27;ÉCOSYSTÈME PROXMOX</a><a class="pill" href="#section-6">MÉTHODES ET OUTILS DE VEILLE</a><a class="pill" href="#section-8">NOUVEAUTÉS ET ÉVOLUTIONS OBSERVÉES</a><a class="pill" href="#section-9">SYNTHÈSE DE LA VEILLE</a></nav><section class="detail-section card scene" id="section-1" data-reveal><h2>Proxmox</h2><figure class="artwork wide-artwork" aria-label="Bannière Proxmox sur fond de salle serveur" style="--art-width:1264.8px;aspect-ratio:1264.80/351.00"><img src="assets/media/illustration-1ca184522.avif" alt="" decoding="async" style="left:0.0000%;top:0.0000%;width:100.0000%;height:100.0000%" loading="lazy"><img src="assets/media/illustration-ec652f11c.avif" alt="" decoding="async" style="left:23.9880%;top:17.6638%;width:52.0240%;height:38.7464%" loading="lazy"></figure><div class="prose"><div>
-  <div><p>Veljko PAVLOVIC - BTS SIO</p></div>
-</div><div>
-  <div><p>Solutions d'entreprise open source sécurisées, flexibles et fiables.</p>
-
-<p>Pour les environnements informatiques professionnels les plus exigeants et les budgets les plus serrés.</p></div>
-</div></div></section><section class="detail-section card " id="section-2" data-reveal><h2>POURQUOI CE THEME ?</h2><div class="prose"><div data-motion="mask">
-  <div><ul>
-<li>
-<p>Intérêt pour la virtualisation</p>
-</li>
-<li>
-<p>Technologie essentielle dans les infrastructures modernes</p>
-</li>
-<li>
-<p>Utilisation dans mon homelab</p>
-</li>
-<li>
-<p>Importance des solutions open source en entreprise</p>
-</li>
-<li>
-<p>Lien avec mon projet professionnel en SISR (2ème année)</p>
-</li>
-</ul></div>
-</div></div></section><section class="detail-section card" id="section-3" data-reveal><h2>L&#x27;ÉCOSYSTÈME PROXMOX</h2><div class="context-section"><div class="context-ecosystem"><figure class="media-tile"><img src="assets/media/illustration-0ee24fe97.avif" alt="" decoding="async" loading="lazy"></figure><div class="context-grid columns-2"><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-e13c58c34.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
-  <div><p>Proxmox Mail Gateway</p></div>
-</div></div></div><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-0342e80af.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
-  <div><p>Proxmox Backup Server</p></div>
-</div></div></div><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-d01ae20fc.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
-  <div><p>Proxmox Virtual Environment</p></div>
-</div></div></div><div class="context-pair media-left compact-pair"><div class="context-media"><figure class="media-tile logo"><img src="assets/media/illustration-8798fef0f.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
-  <div><p>Proxmox Datacenter Manager</p></div>
-</div></div></div></div></div></div></section><section class="detail-section card" id="section-4" data-reveal><h2>OBJECTIFS DE LA VEILLE</h2><div class="context-section"><div class="context-pair"><div class="prose"><div>
-  <div><p>- Suivre les évolutions de Proxmox, </p>
-
-
-
-<p>- Identifier les nouveautés et de comprendre sa place dans les infrastructures professionnelles.</p>
-
-
-
-<p>- Rester à jour et de préparer mes futures missions dans le domaine SISR.</p>
-
-
-
-<p>- Mettre en relation les informations trouvées avec mon utilisation personnelle dans un environnement de test (homelab)</p></div>
-</div></div><div class="context-media"><figure class="artwork" aria-label="Cible et flèche des objectifs de la veille" style="--art-width:270.3px;aspect-ratio:270.30/239.40"><img src="assets/media/illustration-d9f696faf.avif" alt="" decoding="async" style="left:0.0000%;top:13.9515%;width:85.4606%;height:86.0485%" loading="lazy"><img src="assets/media/illustration-2651e9135.png" alt="" decoding="async" style="left:36.8849%;top:0.0000%;width:63.1151%;height:70.0919%" loading="lazy"></figure></div></div></div></section><section class="detail-section card" id="section-5" data-reveal><h2>PROXMOX VIRTUAL ENVIRONMENT (VE)</h2><div class="context-section"><div class="context-overview context-technical"><div class="context-media"><figure class="media-tile"><img src="assets/media/illustration-26ded2165.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile"><img src="assets/media/illustration-a85c48b78.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="prose"><div>
-  <div><p>- Hyperviseur open source de type bare-metal</p>
-
-<p>- Distribution spécialisée basée sur Debian Linux</p>
-
-<p>- Gestion de machines virtuelles avec KVM</p>
-
-<p>- Support des conteneurs Linux (LXC)</p>
-
-<p>- Interface d’administration web</p>
-
-<p>- Fonctions : snapshots, sauvegardes, migration, cluster</p></div>
-</div></div><div class="context-media"><figure class="artwork" aria-label="Illustration et logo Debian" style="--art-width:328.0px;aspect-ratio:328.00/392.50"><img src="assets/media/illustration-3a0018038.avif" alt="" decoding="async" style="left:0.0000%;top:0.0000%;width:100.0000%;height:66.4968%" loading="lazy"><img src="assets/media/debian-f0cf560cb.avif" alt="" decoding="async" style="left:0.0000%;top:74.5223%;width:100.0000%;height:25.4777%" loading="lazy"></figure></div></div></div></section><section class="detail-section card" id="section-6" data-reveal><h2>MÉTHODES ET OUTILS DE VEILLE</h2><div class="context-section"><div class="prose"><div data-motion="mask">
-  <div><p>Pour assurer le suivi des évolutions de Proxmox, j’ai mis en place une méthode de veille reposant sur des sources officielles, des médias spécialisés et les retours de la communauté (forums). </p>
-
-<p>Cette diversité me permet d’obtenir des informations fiables et complémentaires. </p>
-
-<p>La veille est réalisée de manière hebdomadaire avec une attention particulière portée aux annonces de nouvelles versions et aux correctifs de sécurité.</p>
-
-<p>Les informations pertinentes sont ensuite analysées et synthétisées.</p></div>
-</div></div><section class="context-topic"><h3>Sources officielles</h3><div class="prose"><div data-motion="mask">
-  <div>
-
-
-
-<p>- Site et blog Proxmox</p>
-
-<p>- Notes de version et annonces​</p>
-
-</div>
-</div></div><div class="context-grid columns-2"><div class="context-caption"><div class="prose"><div>
-  <div><p>Lien : Site Proxmox​</p></div>
-</div></div><figure class="media-tile"><img src="assets/media/image-bf9d65ba3.avif" alt="" decoding="async" loading="lazy"></figure></div><div class="context-caption"><div class="prose"><div data-motion="mask">
-  <div><p>Lien : <a href="https://pve.proxmox.com/wiki/Roadmap#Release_History">Proxmox Wiki</a>​</p></div>
-</div></div><figure class="media-tile"><img src="assets/media/illustration-ba1664dd7.avif" alt="" decoding="async" loading="lazy"></figure></div></div></section><section class="context-topic"><h3>Médias spécialisés</h3><div class="prose"><div data-motion="mask">
-  <div>
-
-
-
-<p>- Plateformes d’information dédiées aux infrastructures et à la virtualisation</p>
-
-<p>- Blogs techniques publiés par des professionnels du secteur</p>
-
-</div>
-</div></div><div class="context-grid columns-2"><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/image-b3d66e19c.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div>
-  <div><p>Lien : <a href="https://www.it-connect.fr/?s=proxmox">Site d'IT-Connect</a>​</p></div>
-</div></div></div><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/image-c4db555ec.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div data-motion="slide">
-  <div><p>Lien : <a href="https://www.reddit.com/r/Proxmox/">Reddit - Proxmox </a>​</p></div>
-</div></div></div></div></section><section class="context-topic"><h3>Communauté</h3><div class="prose"><div data-motion="mask">
-  <div>
-
-
-
-<p>- Forum Proxmox</p>
-
-<p>- Discussions entre utilisateurs/administrateurs</p>
-
-</div>
-</div></div><div class="context-grid columns-1"><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/illustration-ec652f11c.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div>
-  <div><p>Lien : <a href="https://forum.proxmox.com/">Forum Proxmox</a>​</p></div>
-</div></div></div></div></section><section class="context-topic"><h3>Alertes automatiques</h3><div class="prose"><div data-motion="mask">
-  <div>
-
-
-
-<p>- Google Alertes</p>
-
-<p>- Newsletter Proxmox </p>
-
-<p>- Abonnement à la liste de diffusion Proxmox</p></div>
-</div></div><div class="context-grid columns-3"><div class="context-caption"><figure class="media-tile"><img src="assets/media/image-1cc90df1e.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div>
-  <div><p>Lien : <a href="https://www.google.fr/alerts#">Google Alertes</a>​</p></div>
-</div></div></div><div class="context-caption"><figure class="media-tile"><img src="assets/media/image-6f1f8f9d6.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div data-motion="mask">
-  <div><p>Lien : <a href="https://lists.proxmox.com/postorius/lists/?count=25&amp;all-lists=">Listes de diffusion - Proxmox</a>​</p></div>
-</div></div></div><div class="context-caption"><figure class="media-tile logo"><img src="assets/media/image-0ae59082f.avif" alt="" decoding="async" loading="lazy"></figure><div class="prose"><div data-motion="mask">
-  <div><p>Lien : <a href="https://www.proxmox.com/en/">Site Proxmox</a>​</p></div>
-</div></div></div></div></section></div></section><section class="detail-section card" id="section-7" data-reveal><h2>FORME JURIDIQUE</h2><div class="context-section"><div class="context-pair"><div class="prose"><div>
-  <div><p>- Utilisation gratuite (particuliers &amp; entreprises) </p>
-
-<p>- Code modifiable et redistribuable </p>
-
-<p>- Licence copyleft (obligation de publier les modifications si service en ligne) </p></div>
-</div><div>
-  <div><p>Développé par : Proxmox Server Solutions GmbH, société autrichienne</p></div>
-</div></div><div class="context-media"><figure class="media-tile"><img src="assets/media/illustration-ecef01c17.avif" alt="" decoding="async" loading="lazy"></figure></div></div><div class="prose"><div>
-  <div><p>Des abonnements payants existent pour le support professionnel.<br>
-La responsabilité juridique (RGPD, données hébergées) revient à l’utilisateur.</p></div>
-</div></div><div class="context-grid columns-4"><figure class="media-tile vertical"><img src="assets/media/illustration-88e89ca02.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile vertical"><img src="assets/media/illustration-697521512.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile vertical"><img src="assets/media/illustration-52c629f7a.avif" alt="" decoding="async" loading="lazy"></figure><figure class="media-tile vertical"><img src="assets/media/illustration-a692e8f17.avif" alt="" decoding="async" loading="lazy"></figure></div></div></section><section class="detail-section card " id="section-8" data-reveal><h2>NOUVEAUTÉS ET ÉVOLUTIONS OBSERVÉES</h2><div class="prose"><div data-motion="mask">
-  <div><p>Au moment de la mise en place de ma veille, la version la plus récente de Proxmox VE était la 9.1. </p>
-
-<p>Son analyse m’a permis de comprendre les évolutions récentes et les priorités de développement de la solution.</p></div>
-</div><div data-motion="mask">
-  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
-</div><div data-motion="mask">
-  <div><p>Date de sortie  : 19 Novembre 2025</p></div>
-</div><div data-motion="mask">
-  <div><h3>- Support des images OCI pour les conteneurs</h3></div>
-</div><div data-motion="mask">
-  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
-</div><div data-motion="mask">
-  <div><p>Résumé : Cette évolution permet d’utiliser des modèles de conteneurs basés sur un standard largement répandu dans l’écosystème de la virtualisation et du cloud. </p>
-
-<p>Elle simplifie la création et le déploiement de nouveaux environnements.</p></div>
-</div><div data-motion="mask">
-  <div><p>Impact : Le déploiement devient plus rapide et mieux aligné avec les pratiques modernes utilisées en entreprise.</p></div>
-</div><div data-motion="mask">
-  <div><p>Cette évolution peut faciliter le déploiement rapide de services dans des environnements de test ou de production.</p></div>
-</div><div data-motion="mask">
-  <div><h3>- Amélioration de la virtualisation imbriquée</h3></div>
-</div><div data-motion="mask">
-  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
-</div><div data-motion="mask">
-  <div><p>Résumé : La virtualisation imbriquée permet d’exécuter un hyperviseur à l’intérieur d’une machine virtuelle. Cette amélioration rend son utilisation plus simple et plus stable dans les environnements virtualisés.</p></div>
-</div><div data-motion="mask">
-  <div><p>Impact : Elle facilite la mise en place de laboratoires de test, de formations ou de simulations d’infrastructures sans nécessiter de matériel supplémentaire.</p></div>
-</div><div data-motion="mask">
-  <div><p>Cette évolution peut être particulièrement utile pour expérimenter différentes architectures ou reproduire des scénarios d’entreprise.</p></div>
-</div><div data-motion="mask">
-  <div><h3>- Amélioration du support du TPM pour les machines virtuelles</h3></div>
-</div><div data-motion="mask">
-  <div><p>Source(s) : <a href="https://www.proxmox.com/en/about/company-details/press-releases/proxmox-virtual-environment-9-1">"Proxmox Virtual Environment 9.1 available" - Proxmox</a></p></div>
-</div><div data-motion="mask">
-  <div><p>Résumé : Cette évolution améliore la gestion du module de sécurité TPM au sein des machines virtuelles. </p>
-
-<p>Elle permet une meilleure prise en charge des mécanismes de protection exigés par les systèmes récents, notamment certaines versions de Windows.</p></div>
-</div><div data-motion="mask">
-  <div><p>Impact : Les administrateurs peuvent déployer plus facilement des environnements virtualisés répondant aux exigences de sécurité actuelles dans les entreprises.</p></div>
-</div><div data-motion="mask">
-  <div><p>Cette amélioration favorise l’intégration de systèmes modernes tout en respectant les standards de protection attendus dans une infrastructure professionnelle.</p></div>
-</div></div></section><section class="detail-section card " id="section-9" data-reveal><h2>SYNTHÈSE DE LA VEILLE</h2><div class="prose"><div data-motion="mask">
-  <div><p>Cette veille m’a permis de constater que Proxmox évolue vers des solutions toujours plus modernes, plus simples à déployer et mieux adaptées aux exigences de sécurité des entreprises.</p>
-
-<p>Les améliorations observées montrent une volonté de faciliter le travail des administrateurs tout en assurant une meilleure compatibilité avec les systèmes récents.</p>
-
-<p>Ce suivi régulier m’a aidé à mieux comprendre les enjeux actuels de la virtualisation et à développer ma capacité d’analyse face aux évolutions technologiques.</p></div>
-</div></div></section><section class="detail-section card " id="section-10" data-reveal><h2>APPRENTISSAGES ISSUS DE LA VEILLE</h2><div class="prose"><div data-motion="mask">
-  <div><p>Cette veille m’a permis d’améliorer ma compréhension des environnements virtualisés et des enjeux actuels liés à leur évolution.<br>
-Elle renforce ma capacité à identifier les nouveautés technologiques, à anticiper les impacts en entreprise et à intégrer davantage les aspects liés à la sécurité.<br>
-Ce travail contribue à développer ma rigueur professionnelle et ma préparation aux futures missions d’administration systèmes et réseaux.</p></div>
-</div></div><div class="actions"><a class="button primary" href="assets/documents/resume-veille-proxmox.pdf" download><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>TÉLÉCHARGER LE RÉSUMÉ</a></div></section>
-      </main>
+      <main id="contenu" class="watch" tabindex="-1">
+  <section class="watch-hero card" id="presentation" aria-labelledby="watch-title">
+    <p class="eyebrow">Veille technologique · BTS SIO SISR</p>
+    <h1 id="watch-title">Vol de cookies<br class="watch-break"> de session<span>.</span></h1>
+    <p class="watch-question">Comment un cybercriminel peut-il détourner une session authentifiée sans connaître le mot de passe de sa victime&nbsp;?</p>
+    <div class="watch-flow" aria-hidden="true"><span>Navigateur</span><b>→</b><span>Session</span><b>→</b><span>Application</span></div>
+    <p class="watch-updated">Dernière mise à jour <time datetime="2026-11-17">17 novembre 2026</time></p>
+  </section>
+  <nav class="watch-nav" aria-label="Sommaire de la veille">
+    <a href="#presentation">Présentation</a><a href="#fonctionnement">Fonctionnement</a><a href="#detournement">Détournement</a><a href="#chronologie">Chronologie</a><a href="#protections">Protections</a><a href="#methodologie">Méthodologie</a><a href="#bilan">Bilan</a>
+  </nav>
+  <section class="watch-section card" aria-labelledby="enjeux-title">
+    <h2 id="enjeux-title">Pourquoi ce sujet en SISR&nbsp;?</h2>
+    <p>Une application web peut reconnaître une session par un cookie. Si un tiers obtient un cookie encore valide et que l’application l’accepte dans ce nouveau contexte, il peut agir dans la session avec les droits de l’utilisateur.</p>
+    <p>En entreprise, cela peut exposer la messagerie, des fichiers ou des consoles d’administration. J’ai choisi ce sujet pour relier la gestion des identités, la sécurité des postes et l’analyse des journaux à un même problème&nbsp;: protéger l’accès après la connexion.</p>
+    <a class="watch-source" href="https://attack.mitre.org/techniques/T1539/">MITRE ATT&amp;CK · Technique T1539 ↗</a>
+  </section>
+  <section class="watch-section card" id="fonctionnement">
+    <h2>Comment fonctionne une session web&nbsp;?</h2>
+    <p>Exemple fictif d’une application qui conserve l’état de la session côté serveur.</p>
+    <div class="watch-controls" data-step-controls hidden role="group" aria-label="Choisir une étape">
+      <button class="pill" type="button" data-step="0" aria-controls="etape-1">1<span class="watch-sr"> · Accéder à l’application</span></button><button class="pill" type="button" data-step="1" aria-controls="etape-2">2<span class="watch-sr"> · S’authentifier</span></button><button class="pill" type="button" data-step="2" aria-controls="etape-3">3<span class="watch-sr"> · Créer une session</span></button><button class="pill" type="button" data-step="3" aria-controls="etape-4">4<span class="watch-sr"> · Renvoyer le cookie</span></button><button class="pill" type="button" data-step="4" aria-controls="etape-5">5<span class="watch-sr"> · Reconnaître l’utilisateur</span></button>
+    </div>
+    <div class="watch-diagram">
+    <div class="watch-panel" id="etape-1" data-step-panel>
+      <h3>1. Accéder à l’application</h3><p class="watch-route">Utilisateur → Application</p><p>Le navigateur demande la page web. L’application affiche son écran de connexion, car la requête ne correspond pas encore à une session authentifiée.</p>
+    </div><div class="watch-panel" id="etape-2" data-step-panel>
+      <h3>2. S’authentifier</h3><p class="watch-route">Utilisateur → Serveur</p><p>Le service vérifie l’identité de l’utilisateur. Si sa politique l’exige, il vérifie aussi un facteur supplémentaire.</p>
+    </div><div class="watch-panel" id="etape-3" data-step-panel>
+      <h3>3. Créer une session</h3><p class="watch-route">Serveur → Navigateur</p><p>Après validation, le serveur crée la session. Dans ce modèle, il remet au navigateur un cookie qui contient un identifiant opaque associé à cette session.</p>
+    </div><div class="watch-panel" id="etape-4" data-step-panel>
+      <h3>4. Renvoyer le cookie</h3><p class="watch-route">Navigateur → Serveur</p><p>Le navigateur joint automatiquement le cookie aux requêtes qui respectent son périmètre et ses attributs.</p>
+    </div><div class="watch-panel" id="etape-5" data-step-panel>
+      <h3>5. Reconnaître l’utilisateur</h3><p class="watch-route">Serveur → Application</p><p>Le serveur vérifie que la session est toujours valide, puis applique les droits associés à l’utilisateur pour traiter la requête.</p>
+    </div>
+    </div>
+    <div class="watch-controls" data-step-nav hidden><button type="button" class="button ghost" data-prev>Précédent</button><button type="button" class="button primary" data-next>Suivant</button></div>
+    <p class="watch-sr" role="status" data-step-status></p>
+    <a class="watch-source" href="https://developer.mozilla.org/en-US/docs/Web/Security/Authentication/Session_management">MDN · Gestion des sessions ↗</a>
+  </section>
+  <section class="watch-section card" id="detournement">
+    <h2>Session légitime ou détournée&nbsp;?</h2>
+    <p>Les deux parcours sont fictifs. Le schéma représente seulement les décisions de l’application et les effets possibles.</p>
+    <div class="watch-controls" data-modes hidden role="group" aria-label="Comparer les situations">
+      <button type="button" class="pill" aria-pressed="true" data-mode="legitime" aria-controls="scenario-legitime">Session légitime</button>
+      <button type="button" class="pill" aria-pressed="false" data-mode="detournee" aria-controls="scenario-detournee">Session détournée</button>
+    </div>
+    <div class="watch-diagram">
+      <div class="watch-panel" id="scenario-legitime" data-scenario="legitime">
+        <h3>Session légitime</h3>
+        <ol class="watch-sequence"><li>Identité vérifiée</li><li>Session du navigateur reconnue</li><li>Accès selon les droits du compte</li></ol>
+        <p>L’application associe la requête à la session active de l’utilisateur.</p>
+      </div>
+      <div class="watch-panel watch-warning" id="scenario-detournee" data-scenario="detournee">
+        <h3>Session détournée</h3>
+        <ol class="watch-sequence"><li>Session déjà authentifiée</li><li>Cookie compromis encore valide</li><li>Accès possible au nom de la victime</li></ol>
+        <p>Si l’application accepte la session dans ce contexte, elle peut autoriser la lecture de données, l’envoi de messages ou la modification de paramètres selon les droits détenus.</p>
+      </div>
+    </div>
+    <p class="watch-sr" role="status" data-mode-status></p>
+    <aside class="watch-note"><h3>Pourquoi la MFA ne suffit pas toujours&nbsp;?</h3><p>La MFA protège l’authentification initiale. Une application peut ensuite faire confiance à une session déjà validée sans demander de nouveau facteur. Une MFA résistante à l’hameçonnage protège davantage la connexion initiale. La révocation, les contrôles d’accès et la liaison à l’appareil protègent aussi l’usage de la session.</p></aside>
+    <a class="watch-source" href="https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/">Microsoft Security · Campagne et usage de sessions compromises ↗</a>
+  </section>
+  <section class="watch-section card" id="chronologie">
+    <h2>Chronologie des évolutions</h2>
+    <p>Les dates indiquent la publication de la source, qui peut être postérieure aux faits.</p>
+    <div class="watch-controls" data-filters hidden role="group" aria-label="Catégorie des actualités">
+      <button type="button" class="pill" data-filter="tous" aria-pressed="true">Tout afficher</button>
+      <button type="button" class="pill" data-filter="attaque" aria-pressed="false">Attaque</button><button type="button" class="pill" data-filter="vulnerabilite" aria-pressed="false">Vulnérabilité</button><button type="button" class="pill" data-filter="protection" aria-pressed="false">Protection</button><button type="button" class="pill" data-filter="incident" aria-pressed="false">Incident</button>
+    </div>
+    <p class="watch-sr" role="status" data-news-status></p>
+    <p data-empty hidden>Aucune fiche dans cette catégorie.</p>
+    <div class="watch-timeline">
+      <!-- Pour ajouter un événement, dupliquer un article : type, date ISO, résumé, évolution, impact et source. Mettre à jour la date de veille lors d'une mise à jour réelle. -->
+      <article class="watch-event" data-kind="protection">
+        <div class="watch-event-meta"><time datetime="2026-04-09">9 avril 2026</time><span class="watch-kind">Protection</span></div>
+        <h3>Chrome 146 rend DBSC disponible sur Windows</h3><p>Google annonce la disponibilité publique de Device Bound Session Credentials (DBSC) sur Windows dans Chrome 146.</p>
+        <dl><div><dt>Évolution</dt><dd>Après l’annonce du projet en 2024, un déploiement public devient possible. La preuve liée à l’appareil sert au renouvellement de cookies de courte durée.</dd></div><div><dt>Conséquences pour les entreprises</dt><dd>Vérifier la prise en charge par le navigateur et l’application. Le risque de réutilisation est réduit, mais un cookie court peut rester valide jusqu’à son expiration.</dd></div></dl>
+        <a class="watch-source" href="https://security.googleblog.com/2026/04/">Google Online Security Blog · Protecting Cookies with Device Bound Session Credentials ↗</a>
+      </article><article class="watch-event" data-kind="incident">
+        <div class="watch-event-meta"><time datetime="2023-11-03">3 novembre 2023</time><span class="watch-kind">Incident</span></div>
+        <h3>Des jetons de session exposés dans des dossiers d’assistance Okta</h3><p>Okta a confirmé que certains fichiers d’assistance consultés sans autorisation contenaient des jetons de session, et que des sessions clientes avaient été détournées.</p>
+        <dl><div><dt>Évolution</dt><dd>Le compte rendu a confirmé un risque sur toute la chaîne de traitement des données de diagnostic, jusque chez un prestataire.</dd></div><div><dt>Conséquences pour les entreprises</dt><dd>Assainir les exports avant partage, limiter leur accès et révoquer les sessions exposées.</dd></div></dl>
+        <a class="watch-source" href="https://sec.okta.com/articles/2023/11/unauthorized-access-oktas-support-case-management-system-root-cause/">Okta Security · Rapport d’enquête du 3 novembre ↗</a>
+      </article><article class="watch-event" data-kind="vulnerabilite">
+        <div class="watch-event-meta"><time datetime="2023-10-10">10 octobre 2023</time><span class="watch-kind">Vulnérabilité</span></div>
+        <h3>NetScaler · CVE-2023-4966</h3><p>L’avis initial signale une fuite d’informations sur certaines installations NetScaler. Les mises à jour du bulletin documentent ensuite le détournement de sessions.</p>
+        <dl><div><dt>Évolution</dt><dd>La réponse ne s’arrête pas au correctif. Une session déjà compromise peut rester valide après la mise à jour.</dd></div><div><dt>Conséquences pour les entreprises</dt><dd>Corriger les équipements concernés, invalider les sessions actives ou persistantes et examiner les journaux.</dd></div></dl>
+        <a class="watch-source" href="https://cert.europa.eu/publications/security-advisories/2023-075/">CERT-EU · Avis 2023-075 (historique des révisions) ↗</a>
+      </article><article class="watch-event" data-kind="attaque">
+        <div class="watch-event-meta"><time datetime="2022-07-12">12 juillet 2022</time><span class="watch-kind">Attaque</span></div>
+        <h3>Microsoft documente une campagne de détournement de sessions</h3><p>Microsoft a observé des accès à des messageries professionnelles et des tentatives de fraude à la suite d’une campagne qui compromettait des sessions déjà authentifiées.</p>
+        <dl><div><dt>Évolution</dt><dd>L’enquête met en évidence le rôle du cookie après la connexion : une session valide pouvait encore donner accès à la messagerie, même lorsque la MFA était activée.</dd></div><div><dt>Conséquences pour les entreprises</dt><dd>Compléter la MFA par des règles d’accès, la surveillance des activités et la capacité de révoquer les sessions.</dd></div></dl>
+        <a class="watch-source" href="https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/">Microsoft Security · Analyse de la campagne ↗</a>
+      </article>
+    </div>
+  </section>
+  <section class="watch-section card" id="protections">
+    <h2>Moyens de protection</h2>
+    <div class="watch-protection-grid"><article class="watch-panel"><h3>Sécuriser le cookie</h3><p>Secure limite l’envoi à HTTPS. HttpOnly empêche sa lecture par les scripts de la page. SameSite contrôle certains envois entre sites.</p><p><strong>Limite</strong> · Ces attributs agissent sur des risques différents. Ils ne suffisent pas si le poste ou le serveur est compromis.</p><a class="watch-source" href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP · Gestion des sessions ↗</a></article><article class="watch-panel"><h3>Limiter la durée</h3><p>Appliquer côté serveur un délai d’inactivité et une durée maximale. Exiger une nouvelle authentification pour les actions sensibles.</p><p><strong>Limite</strong> · Une session peut être détournée pendant sa fenêtre de validité. Des délais trop courts perturbent le travail.</p><a class="watch-source" href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP · Expiration de session ↗</a></article><article class="watch-panel"><h3>Révoquer les sessions</h3><p>Invalider les sessions compromises côté serveur et vérifier la propagation de la révocation aux applications concernées.</p><p><strong>Limite</strong> · Effacer un cookie du navigateur ou réinitialiser le mot de passe ne garantit pas que toutes les sessions sont révoquées.</p><a class="watch-source" href="https://cert.europa.eu/publications/security-advisories/2023-075/">CERT-EU · Fin des sessions après correction ↗</a></article><article class="watch-panel"><h3>Surveiller les usages</h3><p>Corréler les journaux de connexion et d’activité. Examiner un changement d’appareil ou de localisation et des actions inhabituelles.</p><p><strong>Limite</strong> · Un changement d’adresse IP peut être légitime. Les signaux demandent du contexte et ne prouvent pas à eux seuls un détournement.</p><a class="watch-source" href="https://attack.mitre.org/mitigations/M1047/">MITRE ATT&CK · Audit ↗</a></article><article class="watch-panel"><h3>Lier la session à l’appareil</h3><p>Lorsque la plateforme le permet, demander une preuve cryptographique liée à l’appareil pour renouveler la session.</p><p><strong>Limite</strong> · Le navigateur et l’application doivent prendre en charge le mécanisme. Il ne remplace pas la protection du poste, ni la révocation.</p><a class="watch-source" href="https://security.googleblog.com/2026/04/">Google · DBSC ↗</a></article></div>
+  </section>
+  <section class="watch-section card" id="methodologie">
+    <h2>Méthodologie de veille</h2>
+    <h3>Sources et outils à évaluer</h3>
+    <ul class="watch-sources">
+      <li><a href="https://cert.cyber.gouv.fr/">ANSSI / CERT-FR</a> · Alertes et avis sur les produits concernés.</li>
+      <li><a href="https://attack.mitre.org/techniques/T1539/">MITRE ATT&amp;CK</a> · Technique T1539 et mesures de réduction du risque.</li>
+      <li><a href="https://www.microsoft.com/en-us/security/blog/">Microsoft Security</a> · Analyses de campagnes et recommandations côté défense.</li>
+      <li><a href="https://www.bleepingcomputer.com/news/security/">BleepingComputer</a> · Média spécialisé pour repérer des sujets à recouper avec un éditeur ou un CERT.</li>
+      <li><a href="https://www.google.com/alerts">Google Alertes</a> ou lecteur RSS · Options pour signaler de nouvelles publications.</li>
+    </ul>
+    <h3>Suivi personnel à renseigner</h3>
+    <dl class="watch-fields">
+      <div><dt>Outils réellement utilisés</dt><dd>À renseigner après choix des outils.</dd></div>
+      <div><dt>Fréquence de consultation</dt><dd>À renseigner après mise en place du suivi.</dd></div>
+      <div><dt>Critères proposés</dt><dd>Lien direct avec les sessions web, date vérifiable, source d’origine et conséquence concrète pour l’administration ou la défense.</dd></div>
+    </dl>
+  </section>
+  <section class="watch-section card" id="bilan">
+    <h2>Synthèse et bilan personnel</h2>
+    <p>Les cas de la frise montrent qu’un accès peut être compromis après l’authentification et qu’un correctif ne révoque pas nécessairement une session existante. La protection évolue aussi vers des preuves liées à l’appareil, lorsque les applications et navigateurs les prennent en charge.</p>
+    <p>Pour un administrateur SISR, je retiens trois points à vérifier : la durée de vie d’une session, la procédure pour l’invalider et les signaux disponibles dans les journaux.</p>
+    <details class="watch-note"><summary>Retour d’expérience personnel à compléter</summary><p>Ajouter un exemple étudié, une connaissance acquise et une application concrète envisagée dans un contexte professionnel.</p></details>
+  </section>
+</main>
     </div>
     <footer><span>Veljko Pavlovic · BTS SIO SISR</span><a href="#portfolio">Haut de page ↑</a></footer>
   </div>
+<script>
+(() => {
+  const watch = document.querySelector('.watch');
+  const stepControls = watch.querySelector('[data-step-controls]');
+  const stepNav = watch.querySelector('[data-step-nav]');
+  const stepStatus = watch.querySelector('[data-step-status]');
+  const steps = [...watch.querySelectorAll('[data-step-panel]')];
+  const stepButtons = [...stepControls.querySelectorAll('button')];
+  const previous = stepNav.querySelector('[data-prev]');
+  const next = stepNav.querySelector('[data-next]');
+  let position = 0;
+
+  function showStep(index, announce = true) {
+    position = Math.max(0, Math.min(index, steps.length - 1));
+    steps.forEach((panel, i) => { panel.hidden = i !== position; });
+    stepButtons.forEach((button, i) => {
+      button.setAttribute('aria-pressed', String(i === position));
+      if (i === position) button.setAttribute('aria-current', 'step');
+      else button.removeAttribute('aria-current');
+    });
+    const focusedDisabled = (document.activeElement === previous && position === 0)
+      || (document.activeElement === next && position === steps.length - 1);
+    previous.disabled = position === 0;
+    next.disabled = position === steps.length - 1;
+    if (focusedDisabled) stepButtons[position].focus({preventScroll:true});
+    if (announce) stepStatus.textContent = 'Étape ' + (position + 1) + ' sur ' + steps.length + ' · ' + steps[position].querySelector('h3').textContent;
+  }
+
+  stepButtons.forEach((button, i) => button.addEventListener('click', () => showStep(i)));
+  previous.addEventListener('click', () => showStep(position - 1));
+  next.addEventListener('click', () => showStep(position + 1));
+  showStep(0, false);
+  stepControls.hidden = stepNav.hidden = false;
+
+  const modes = watch.querySelector('[data-modes]');
+  const modeButtons = [...modes.querySelectorAll('[data-mode]')];
+  const scenarios = [...watch.querySelectorAll('[data-scenario]')];
+  const modeStatus = watch.querySelector('[data-mode-status]');
+  function showMode(mode, announce = true) {
+    scenarios.forEach(panel => { panel.hidden = panel.dataset.scenario !== mode; });
+    modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === mode)));
+    if (announce) modeStatus.textContent = scenarios.find(panel => !panel.hidden).querySelector('h3').textContent + ' affichée.';
+  }
+  modeButtons.forEach(button => button.addEventListener('click', () => showMode(button.dataset.mode)));
+  showMode('legitime', false);
+  modes.hidden = false;
+
+  const filters = watch.querySelector('[data-filters]');
+  const filtersButtons = [...filters.querySelectorAll('[data-filter]')];
+  const articles = [...watch.querySelectorAll('[data-kind]')];
+  const empty = watch.querySelector('[data-empty]');
+  const newsStatus = watch.querySelector('[data-news-status]');
+  filtersButtons.forEach(button => button.addEventListener('click', () => {
+    const kind = button.dataset.filter;
+    filtersButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    let count = 0;
+    articles.forEach(article => {
+      article.hidden = kind !== 'tous' && article.dataset.kind !== kind;
+      if (!article.hidden) count += 1;
+    });
+    empty.hidden = count !== 0;
+    newsStatus.textContent = count + (count > 1 ? ' fiches affichées.' : ' fiche affichée.');
+  }));
+  filters.hidden = false;
+})();
+</script>
 </body>
 </html>
